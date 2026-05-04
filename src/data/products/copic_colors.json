@@ -1,0 +1,2150 @@
+[
+  {
+    "code": "0",
+    "name": "Colorless Blender",
+    "hex": "#ffffff",
+    "type": "copic marker"
+  },
+  {
+    "code": "100",
+    "name": "Black",
+    "hex": "#312b2b",
+    "type": "copic marker"
+  },
+  {
+    "code": "110",
+    "name": "Special Black",
+    "hex": "#030708",
+    "type": "copic marker"
+  },
+  {
+    "code": "FY1",
+    "name": "Fluorescent Yellow",
+    "hex": "#fff697",
+    "type": "copic marker"
+  },
+  {
+    "code": "FYR1",
+    "name": "Fluorescent Orange",
+    "hex": "#fecc99",
+    "type": "copic marker"
+  },
+  {
+    "code": "FRV1",
+    "name": "Fluorescent Pink",
+    "hex": "#f5a3c7",
+    "type": "copic marker"
+  },
+  {
+    "code": "FV2",
+    "name": "Fluorescent Violet",
+    "hex": "#7f74b6",
+    "type": "copic marker"
+  },
+  {
+    "code": "FYG",
+    "name": "Fluorescent Yellow Green",
+    "hex": "#D7E3A2",
+    "type": "copic marker"
+  },
+  {
+    "code": "FG",
+    "name": "Fluorescent Green",
+    "hex": "#A3CB23",
+    "type": "copic marker"
+  },
+  {
+    "code": "FBG",
+    "name": "Fluorescent Blue Green",
+    "hex": "#71C9E8",
+    "type": "copic marker"
+  },
+  {
+    "code": "FB",
+    "name": "Fluorescent Blue",
+    "hex": "#0089CE",
+    "type": "copic marker"
+  },
+  {
+    "code": "B0000",
+    "name": "Pale Celestine",
+    "hex": "#f0f9fe",
+    "type": "copic marker"
+  },
+  {
+    "code": "B000",
+    "name": "Pale Porcelain Blue",
+    "hex": "#e6f4f5",
+    "type": "copic marker"
+  },
+  {
+    "code": "B00",
+    "name": "Frost Blue",
+    "hex": "#ddf0f4",
+    "type": "copic marker"
+  },
+  {
+    "code": "B01",
+    "name": "Mint Blue",
+    "hex": "#d6eef2",
+    "type": "copic marker"
+  },
+  {
+    "code": "B02",
+    "name": "Robin's Egg Blue",
+    "hex": "#b3e3f1",
+    "type": "copic marker"
+  },
+  {
+    "code": "B04",
+    "name": "Tahitian Blue",
+    "hex": "#73cfe6",
+    "type": "copic marker"
+  },
+  {
+    "code": "B05",
+    "name": "Process Blue",
+    "hex": "#40c5e6",
+    "type": "copic marker"
+  },
+  {
+    "code": "B06",
+    "name": "Peacock Blue",
+    "hex": "#00b3e6",
+    "type": "copic marker"
+  },
+  {
+    "code": "B12",
+    "name": "Ice Blue",
+    "hex": "#c8e6f0",
+    "type": "copic marker"
+  },
+  {
+    "code": "B14",
+    "name": "Light Blue",
+    "hex": "#71cfeb",
+    "type": "copic marker"
+  },
+  {
+    "code": "B16",
+    "name": "Cyanine Blue",
+    "hex": "#00bcea",
+    "type": "copic marker"
+  },
+  {
+    "code": "B18",
+    "name": "Lapis Lazuli",
+    "hex": "#1d8acb",
+    "type": "copic marker"
+  },
+  {
+    "code": "B21",
+    "name": "Baby Blue",
+    "hex": "#dbedf9",
+    "type": "copic marker"
+  },
+  {
+    "code": "B23",
+    "name": "Phthalo Blue",
+    "hex": "#92c2e8",
+    "type": "copic marker"
+  },
+  {
+    "code": "B24",
+    "name": "Sky",
+    "hex": "#8acef3",
+    "type": "copic marker"
+  },
+  {
+    "code": "B26",
+    "name": "Cobalt Blue",
+    "hex": "#65b3e3",
+    "type": "copic marker"
+  },
+  {
+    "code": "B28",
+    "name": "Royal Blue",
+    "hex": "#196db6",
+    "type": "copic marker"
+  },
+  {
+    "code": "B29",
+    "name": "Ultramarine",
+    "hex": "#0177c1",
+    "type": "copic marker"
+  },
+  {
+    "code": "B32",
+    "name": "Pale Blue",
+    "hex": "#e2eff7",
+    "type": "copic marker"
+  },
+  {
+    "code": "B34",
+    "name": "Manganese Blue",
+    "hex": "#82c3ed",
+    "type": "copic marker"
+  },
+  {
+    "code": "B37",
+    "name": "Antwerp Blue",
+    "hex": "#156fa4",
+    "type": "copic marker"
+  },
+  {
+    "code": "B39",
+    "name": "Prussian Blue",
+    "hex": "#2b64a9",
+    "type": "copic marker"
+  },
+  {
+    "code": "B41",
+    "name": "Powder Blue",
+    "hex": "#e2f0fb",
+    "type": "copic marker"
+  },
+  {
+    "code": "B45",
+    "name": "Smoky Blue",
+    "hex": "#75c0ea",
+    "type": "copic marker"
+  },
+  {
+    "code": "B52",
+    "name": "Soft Greenish Blue",
+    "hex": "#adcddc",
+    "type": "copic marker"
+  },
+  {
+    "code": "B60",
+    "name": "Pale Blue Gray",
+    "hex": "#dae1f3",
+    "type": "copic marker"
+  },
+  {
+    "code": "B63",
+    "name": "Light Hydrangea",
+    "hex": "#a7bbe0",
+    "type": "copic marker"
+  },
+  {
+    "code": "B66",
+    "name": "Clematis",
+    "hex": "#6888c5",
+    "type": "copic marker"
+  },
+  {
+    "code": "B69",
+    "name": "Stratospheric Blue",
+    "hex": "#2165ae",
+    "type": "copic marker"
+  },
+  {
+    "code": "B79",
+    "name": "Iris",
+    "hex": "#3b479d",
+    "type": "copic marker"
+  },
+  {
+    "code": "B91",
+    "name": "Pale Grayish Blue",
+    "hex": "#d5e2eb",
+    "type": "copic marker"
+  },
+  {
+    "code": "B93",
+    "name": "Light Crockery Blue",
+    "hex": "#95c1da",
+    "type": "copic marker"
+  },
+  {
+    "code": "B95",
+    "name": "Light Grayish Cobalt",
+    "hex": "#60c5cf",
+    "type": "copic marker"
+  },
+  {
+    "code": "B97",
+    "name": "Night Blue",
+    "hex": "#457a9a",
+    "type": "copic marker"
+  },
+  {
+    "code": "B99",
+    "name": "Agate",
+    "hex": "#0f547e",
+    "type": "copic marker"
+  },
+  {
+    "code": "BG0000",
+    "name": "Snow Green",
+    "hex": "#eff8f3",
+    "type": "copic marker"
+  },
+  {
+    "code": "BG000",
+    "name": "Pale Aqua",
+    "hex": "#e5f4ed",
+    "type": "copic marker"
+  },
+  {
+    "code": "BG01",
+    "name": "Aqua Blue",
+    "hex": "#c7e6fa",
+    "type": "copic marker"
+  },
+  {
+    "code": "BG02",
+    "name": "New Blue",
+    "hex": "#c6e8ea",
+    "type": "copic marker"
+  },
+  {
+    "code": "BG05",
+    "name": "Holiday Blue",
+    "hex": "#1db8ce",
+    "type": "copic marker"
+  },
+  {
+    "code": "BG07",
+    "name": "Petroleum Blue",
+    "hex": "#0e9fb3",
+    "type": "copic marker"
+  },
+  {
+    "code": "BG09",
+    "name": "Blue Green",
+    "hex": "#4bcecb",
+    "type": "copic marker"
+  },
+  {
+    "code": "BG10",
+    "name": "Cool Shadow",
+    "hex": "#dcf0ef",
+    "type": "copic marker"
+  },
+  {
+    "code": "BG11",
+    "name": "Moon White",
+    "hex": "#ceebf1",
+    "type": "copic marker"
+  },
+  {
+    "code": "BG13",
+    "name": "Mint Green",
+    "hex": "#c4e7e9",
+    "type": "copic marker"
+  },
+  {
+    "code": "BG15",
+    "name": "Aqua",
+    "hex": "#a0d9d2",
+    "type": "copic marker"
+  },
+  {
+    "code": "BG18",
+    "name": "Teal Blue",
+    "hex": "#37c0b0",
+    "type": "copic marker"
+  },
+  {
+    "code": "BG23",
+    "name": "Coral Sea",
+    "hex": "#bde5dd",
+    "type": "copic marker"
+  },
+  {
+    "code": "BG32",
+    "name": "Aqua Mint",
+    "hex": "#bce2d7",
+    "type": "copic marker"
+  },
+  {
+    "code": "BG34",
+    "name": "Horizon Green",
+    "hex": "#a3dad7",
+    "type": "copic marker"
+  },
+  {
+    "code": "BG45",
+    "name": "Nile Blue",
+    "hex": "#afdfdf",
+    "type": "copic marker"
+  },
+  {
+    "code": "BG49",
+    "name": "Duck Blue",
+    "hex": "#00b6b9",
+    "type": "copic marker"
+  },
+  {
+    "code": "BG53",
+    "name": "Ice Mint",
+    "hex": "#accfd1",
+    "type": "copic marker"
+  },
+  {
+    "code": "BG57",
+    "name": "Jasper",
+    "hex": "#64bebe",
+    "type": "copic marker"
+  },
+  {
+    "code": "BG70",
+    "name": "Ocean Mist",
+    "hex": "#daecee",
+    "type": "copic marker"
+  },
+  {
+    "code": "BG72",
+    "name": "Ice Ocean",
+    "hex": "#74b8bb",
+    "type": "copic marker"
+  },
+  {
+    "code": "BG75",
+    "name": "Abyss Green",
+    "hex": "#59918e",
+    "type": "copic marker"
+  },
+  {
+    "code": "BG78",
+    "name": "Bronze",
+    "hex": "#49706b",
+    "type": "copic marker"
+  },
+  {
+    "code": "BG90",
+    "name": "Gray Sky",
+    "hex": "#bac1b9",
+    "type": "copic marker"
+  },
+  {
+    "code": "BG93",
+    "name": "Green Gray",
+    "hex": "#b2b9b2",
+    "type": "copic marker"
+  },
+  {
+    "code": "BG96",
+    "name": "Bush",
+    "hex": "#81a291",
+    "type": "copic marker"
+  },
+  {
+    "code": "BG99",
+    "name": "Flagstone Blue",
+    "hex": "#6e9b87",
+    "type": "copic marker"
+  },
+  {
+    "code": "BV0000",
+    "name": "Pale Thistle",
+    "hex": "#f0edf7",
+    "type": "copic marker"
+  },
+  {
+    "code": "BV000",
+    "name": "Iridescent Mauve",
+    "hex": "#eae7f2",
+    "type": "copic marker"
+  },
+  {
+    "code": "BV00",
+    "name": "Mauve Shadow",
+    "hex": "#e0dced",
+    "type": "copic marker"
+  },
+  {
+    "code": "BV01",
+    "name": "Viola",
+    "hex": "#c4c9e6",
+    "type": "copic marker"
+  },
+  {
+    "code": "BV02",
+    "name": "Prune",
+    "hex": "#aab8db",
+    "type": "copic marker"
+  },
+  {
+    "code": "BV04",
+    "name": "Blue Berry",
+    "hex": "#7c97ce",
+    "type": "copic marker"
+  },
+  {
+    "code": "BV08",
+    "name": "Blue Violet",
+    "hex": "#8a7fc1",
+    "type": "copic marker"
+  },
+  {
+    "code": "BV11",
+    "name": "Soft Violet",
+    "hex": "#d4d2e8",
+    "type": "copic marker"
+  },
+  {
+    "code": "BV13",
+    "name": "Hydrangea Blue",
+    "hex": "#8491c8",
+    "type": "copic marker"
+  },
+  {
+    "code": "BV17",
+    "name": "Deep Reddish Blue",
+    "hex": "#6e84bd",
+    "type": "copic marker"
+  },
+  {
+    "code": "BV20",
+    "name": "Dull Lavender",
+    "hex": "#cfdbf1",
+    "type": "copic marker"
+  },
+  {
+    "code": "BV23",
+    "name": "Grayish Lavender",
+    "hex": "#b1c0dd",
+    "type": "copic marker"
+  },
+  {
+    "code": "BV25",
+    "name": "Grayish Violet",
+    "hex": "#8184a7",
+    "type": "copic marker"
+  },
+  {
+    "code": "BV29",
+    "name": "Slate",
+    "hex": "#384558",
+    "type": "copic marker"
+  },
+  {
+    "code": "BV31",
+    "name": "Pale Lavender",
+    "hex": "#dcdaf0",
+    "type": "copic marker"
+  },
+  {
+    "code": "BV34",
+    "name": "Bluebell",
+    "hex": "#9fa7bc",
+    "type": "copic marker"
+  },
+  {
+    "code": "C-00",
+    "name": "Cool Gray No. 00",
+    "hex": "#F0F4F7",
+    "type": "copic marker"
+  },
+  {
+    "code": "C-0",
+    "name": "Cool Gray No. 0",
+    "hex": "#e0e7ed",
+    "type": "copic marker"
+  },
+  {
+    "code": "C-1",
+    "name": "Cool Gray No. 1",
+    "hex": "#dae3e8",
+    "type": "copic marker"
+  },
+  {
+    "code": "C-2",
+    "name": "Cool Gray No. 2",
+    "hex": "#ccd7dd",
+    "type": "copic marker"
+  },
+  {
+    "code": "C-3",
+    "name": "Cool Gray No. 3",
+    "hex": "#c1ccd2",
+    "type": "copic marker"
+  },
+  {
+    "code": "C-4",
+    "name": "Cool Gray No. 4",
+    "hex": "#a9b6be",
+    "type": "copic marker"
+  },
+  {
+    "code": "C-5",
+    "name": "Cool Gray No. 5",
+    "hex": "#92a0ab",
+    "type": "copic marker"
+  },
+  {
+    "code": "C-6",
+    "name": "Cool Gray No. 6",
+    "hex": "#7a878f",
+    "type": "copic marker"
+  },
+  {
+    "code": "C-7",
+    "name": "Cool Gray No. 7",
+    "hex": "#637079",
+    "type": "copic marker"
+  },
+  {
+    "code": "C-8",
+    "name": "Cool Gray No. 8",
+    "hex": "#535d66",
+    "type": "copic marker"
+  },
+  {
+    "code": "C-9",
+    "name": "Cool Gray No. 9",
+    "hex": "#3c474d",
+    "type": "copic marker"
+  },
+  {
+    "code": "C-10",
+    "name": "Cool Gray No. 10",
+    "hex": "#202b31",
+    "type": "copic marker"
+  },
+  {
+    "code": "E0000",
+    "name": "Floral White",
+    "hex": "#fffaf4",
+    "type": "copic marker"
+  },
+  {
+    "code": "E000",
+    "name": "Pale Fruit Pink",
+    "hex": "#fef5ee",
+    "type": "copic marker"
+  },
+  {
+    "code": "E00",
+    "name": "Cotton Pearl",
+    "hex": "#fdf3ea",
+    "type": "copic marker"
+  },
+  {
+    "code": "E01",
+    "name": "Pink Flamingo",
+    "hex": "#ffeee4",
+    "type": "copic marker"
+  },
+  {
+    "code": "E02",
+    "name": "Fruit Pink",
+    "hex": "#feece0",
+    "type": "copic marker"
+  },
+  {
+    "code": "E04",
+    "name": "Lipstick Rose",
+    "hex": "#e4bcc4",
+    "type": "copic marker"
+  },
+  {
+    "code": "E07",
+    "name": "Light Mahogany",
+    "hex": "#cc816a",
+    "type": "copic marker"
+  },
+  {
+    "code": "E08",
+    "name": "Brown",
+    "hex": "#ca6553",
+    "type": "copic marker"
+  },
+  {
+    "code": "E09",
+    "name": "Burnt Sienna",
+    "hex": "#d96a4f",
+    "type": "copic marker"
+  },
+  {
+    "code": "E11",
+    "name": "Barley Beige",
+    "hex": "#fee9d6",
+    "type": "copic marker"
+  },
+  {
+    "code": "E13",
+    "name": "Desert Sand",
+    "hex": "#e9c5af",
+    "type": "copic marker"
+  },
+  {
+    "code": "E15",
+    "name": "Earthenware",
+    "hex": "#fbbb8d",
+    "type": "copic marker"
+  },
+  {
+    "code": "E17",
+    "name": "Reddish Brass",
+    "hex": "#b85f57",
+    "type": "copic marker"
+  },
+  {
+    "code": "E18",
+    "name": "Copper",
+    "hex": "#88534d",
+    "type": "copic marker"
+  },
+  {
+    "code": "E19",
+    "name": "Redwood",
+    "hex": "#c45238",
+    "type": "copic marker"
+  },
+  {
+    "code": "E21",
+    "name": "Soft Sun",
+    "hex": "#fde2c7",
+    "type": "copic marker"
+  },
+  {
+    "code": "E23",
+    "name": "Hazelnut",
+    "hex": "#eccab1",
+    "type": "copic marker"
+  },
+  {
+    "code": "E25",
+    "name": "Caribe Cocoa",
+    "hex": "#d2a482",
+    "type": "copic marker"
+  },
+  {
+    "code": "E27",
+    "name": "Milk Chocolate",
+    "hex": "#997663",
+    "type": "copic marker"
+  },
+  {
+    "code": "E29",
+    "name": "Burnt Umber",
+    "hex": "#884636",
+    "type": "copic marker"
+  },
+  {
+    "code": "E30",
+    "name": "Bisque",
+    "hex": "#f7f0d6",
+    "type": "copic marker"
+  },
+  {
+    "code": "E31",
+    "name": "Brick Beige",
+    "hex": "#f2e6ce",
+    "type": "copic marker"
+  },
+  {
+    "code": "E33",
+    "name": "Sand",
+    "hex": "#f3d2b1",
+    "type": "copic marker"
+  },
+  {
+    "code": "E34",
+    "name": "Toast",
+    "hex": "#f0caa6",
+    "type": "copic marker"
+  },
+  {
+    "code": "E35",
+    "name": "Chamois",
+    "hex": "#e6c3a3",
+    "type": "copic marker"
+  },
+  {
+    "code": "E37",
+    "name": "Sepia",
+    "hex": "#cc9159",
+    "type": "copic marker"
+  },
+  {
+    "code": "E39",
+    "name": "Leather",
+    "hex": "#c5743f",
+    "type": "copic marker"
+  },
+  {
+    "code": "E40",
+    "name": "Brick White",
+    "hex": "#f2e8dc",
+    "type": "copic marker"
+  },
+  {
+    "code": "E41",
+    "name": "Pearl White",
+    "hex": "#fef1e1",
+    "type": "copic marker"
+  },
+  {
+    "code": "E42",
+    "name": "Sand White",
+    "hex": "#f3ead9",
+    "type": "copic marker"
+  },
+  {
+    "code": "E43",
+    "name": "Dull Ivory",
+    "hex": "#e8dabd",
+    "type": "copic marker"
+  },
+  {
+    "code": "E44",
+    "name": "Clay",
+    "hex": "#8a6e59",
+    "type": "copic marker"
+  },
+  {
+    "code": "E47",
+    "name": "Dark Brown",
+    "hex": "#7a5e4a",
+    "type": "copic marker"
+  },
+  {
+    "code": "E49",
+    "name": "Dark Bark",
+    "hex": "#634c3c",
+    "type": "copic marker"
+  },
+  {
+    "code": "E50",
+    "name": "Egg Shell",
+    "hex": "#f4ebf0",
+    "type": "copic marker"
+  },
+  {
+    "code": "E51",
+    "name": "Milky White",
+    "hex": "#feecd6",
+    "type": "copic marker"
+  },
+  {
+    "code": "E53",
+    "name": "Raw Silk",
+    "hex": "#f1dfb9",
+    "type": "copic marker"
+  },
+  {
+    "code": "E55",
+    "name": "Light Camel",
+    "hex": "#ecd49d",
+    "type": "copic marker"
+  },
+  {
+    "code": "E57",
+    "name": "Light Walnut",
+    "hex": "#b18558",
+    "type": "copic marker"
+  },
+  {
+    "code": "E59",
+    "name": "Walnut",
+    "hex": "#9a7f6c",
+    "type": "copic marker"
+  },
+  {
+    "code": "E70",
+    "name": "Ash Rose",
+    "hex": "#efeae6",
+    "type": "copic marker"
+  },
+  {
+    "code": "E71",
+    "name": "Champagne",
+    "hex": "#c4a99e",
+    "type": "copic marker"
+  },
+  {
+    "code": "E74",
+    "name": "Cocoa Brown",
+    "hex": "#a1847c",
+    "type": "copic marker"
+  },
+  {
+    "code": "E77",
+    "name": "Maroon",
+    "hex": "#7f604e",
+    "type": "copic marker"
+  },
+  {
+    "code": "E79",
+    "name": "Cashew",
+    "hex": "#4a2c22",
+    "type": "copic marker"
+  },
+  {
+    "code": "E81",
+    "name": "Ivory",
+    "hex": "#f0e6c2",
+    "type": "copic marker"
+  },
+  {
+    "code": "E84",
+    "name": "Khaki",
+    "hex": "#ae9f80",
+    "type": "copic marker"
+  },
+  {
+    "code": "E87",
+    "name": "Fig",
+    "hex": "#6f604d",
+    "type": "copic marker"
+  },
+  {
+    "code": "E89",
+    "name": "Pecan",
+    "hex": "#5a4939",
+    "type": "copic marker"
+  },
+  {
+    "code": "E93",
+    "name": "Tea Rose",
+    "hex": "#fed2b9",
+    "type": "copic marker"
+  },
+  {
+    "code": "E95",
+    "name": "Tea Orange",
+    "hex": "#fcbc7e",
+    "type": "copic marker"
+  },
+  {
+    "code": "E97",
+    "name": "Deep Orange",
+    "hex": "#c47038",
+    "type": "copic marker"
+  },
+  {
+    "code": "E99",
+    "name": "Baked Clay",
+    "hex": "#b46034",
+    "type": "copic marker"
+  },
+  {
+    "code": "G0000",
+    "name": "Crystal Opal",
+    "hex": "#f1f7f3",
+    "type": "copic marker"
+  },
+  {
+    "code": "G000",
+    "name": "Pale Green",
+    "hex": "#eaf5ed",
+    "type": "copic marker"
+  },
+  {
+    "code": "G00",
+    "name": "Jade Green",
+    "hex": "#e3f2ed",
+    "type": "copic marker"
+  },
+  {
+    "code": "G02",
+    "name": "Spectrum Green",
+    "hex": "#cfe8d3",
+    "type": "copic marker"
+  },
+  {
+    "code": "G03",
+    "name": "Meadow Green",
+    "hex": "#b6da9c",
+    "type": "copic marker"
+  },
+  {
+    "code": "G05",
+    "name": "Emerald Green",
+    "hex": "#69c07b",
+    "type": "copic marker"
+  },
+  {
+    "code": "G07",
+    "name": "Nile Green",
+    "hex": "#7bc576",
+    "type": "copic marker"
+  },
+  {
+    "code": "G09",
+    "name": "Veronese Green",
+    "hex": "#7ac465",
+    "type": "copic marker"
+  },
+  {
+    "code": "G12",
+    "name": "Sea Green",
+    "hex": "#d2e8c4",
+    "type": "copic marker"
+  },
+  {
+    "code": "G14",
+    "name": "Apple Green",
+    "hex": "#97cf90",
+    "type": "copic marker"
+  },
+  {
+    "code": "G16",
+    "name": "Malachite",
+    "hex": "#60c198",
+    "type": "copic marker"
+  },
+  {
+    "code": "G17",
+    "name": "Forest Green",
+    "hex": "#14b37d",
+    "type": "copic marker"
+  },
+  {
+    "code": "G19",
+    "name": "Bright Parrot Green",
+    "hex": "#2db98a",
+    "type": "copic marker"
+  },
+  {
+    "code": "G20",
+    "name": "Wax White",
+    "hex": "#edf6db",
+    "type": "copic marker"
+  },
+  {
+    "code": "G21",
+    "name": "Lime Green",
+    "hex": "#c4e4cd",
+    "type": "copic marker"
+  },
+  {
+    "code": "G24",
+    "name": "Willow",
+    "hex": "#c3e0b4",
+    "type": "copic marker"
+  },
+  {
+    "code": "G28",
+    "name": "Ocean Green",
+    "hex": "#119462",
+    "type": "copic marker"
+  },
+  {
+    "code": "G29",
+    "name": "Pine Tree Green",
+    "hex": "#197c5d",
+    "type": "copic marker"
+  },
+  {
+    "code": "G40",
+    "name": "Dim Green",
+    "hex": "#e4f1df",
+    "type": "copic marker"
+  },
+  {
+    "code": "G43",
+    "name": "Pistachio",
+    "hex": "#d7e7a8",
+    "type": "copic marker"
+  },
+  {
+    "code": "G46",
+    "name": "Mistletoe",
+    "hex": "#5a7832",
+    "type": "copic marker"
+  },
+  {
+    "code": "G82",
+    "name": "Spring Dim Green",
+    "hex": "#ccdab9",
+    "type": "copic marker"
+  },
+  {
+    "code": "G85",
+    "name": "Verdigris",
+    "hex": "#9dc3aa",
+    "type": "copic marker"
+  },
+  {
+    "code": "G94",
+    "name": "Grayish Olive",
+    "hex": "#98a786",
+    "type": "copic marker"
+  },
+  {
+    "code": "G99",
+    "name": "Olive",
+    "hex": "#5f7e3a",
+    "type": "copic marker"
+  },
+  {
+    "code": "N-0",
+    "name": "Neutral Gray No. 0",
+    "hex": "#eceeed",
+    "type": "copic marker"
+  },
+  {
+    "code": "N-1",
+    "name": "Neutral Gray No. 1",
+    "hex": "#e2e3e5",
+    "type": "copic marker"
+  },
+  {
+    "code": "N-2",
+    "name": "Neutral Gray No. 2",
+    "hex": "#dadbdd",
+    "type": "copic marker"
+  },
+  {
+    "code": "N-3",
+    "name": "Neutral Gray No. 3",
+    "hex": "#d1d2d4",
+    "type": "copic marker"
+  },
+  {
+    "code": "N-4",
+    "name": "Neutral Gray No. 4",
+    "hex": "#bcbdc1",
+    "type": "copic marker"
+  },
+  {
+    "code": "N-5",
+    "name": "Neutral Gray No. 5",
+    "hex": "#a8a9ad",
+    "type": "copic marker"
+  },
+  {
+    "code": "N-6",
+    "name": "Neutral Gray No. 6",
+    "hex": "#949599",
+    "type": "copic marker"
+  },
+  {
+    "code": "N-7",
+    "name": "Neutral Gray No. 7",
+    "hex": "#77787c",
+    "type": "copic marker"
+  },
+  {
+    "code": "N-8",
+    "name": "Neutral Gray No. 8",
+    "hex": "#636466",
+    "type": "copic marker"
+  },
+  {
+    "code": "N-9",
+    "name": "Neutral Gray No. 9",
+    "hex": "#4c4d4f",
+    "type": "copic marker"
+  },
+  {
+    "code": "N-10",
+    "name": "Neutral Gray No. 10",
+    "hex": "#312f30",
+    "type": "copic marker"
+  },
+  {
+    "code": "R0000",
+    "name": "Pink Beryl",
+    "hex": "#fef3ef",
+    "type": "copic marker"
+  },
+  {
+    "code": "R000",
+    "name": "Cherry White",
+    "hex": "#fef0e7",
+    "type": "copic marker"
+  },
+  {
+    "code": "R00",
+    "name": "Pinkish White",
+    "hex": "#feeae1",
+    "type": "copic marker"
+  },
+  {
+    "code": "R01",
+    "name": "Pinkish Vanilla",
+    "hex": "#fde0d8",
+    "type": "copic marker"
+  },
+  {
+    "code": "R02",
+    "name": "Rose Salmon",
+    "hex": "#fdd3c7",
+    "type": "copic marker"
+  },
+  {
+    "code": "R05",
+    "name": "Salmon Red",
+    "hex": "#f6917b",
+    "type": "copic marker"
+  },
+  {
+    "code": "R08",
+    "name": "Vermillion",
+    "hex": "#f26754",
+    "type": "copic marker"
+  },
+  {
+    "code": "R11",
+    "name": "Pale Cherry Pink",
+    "hex": "#fde1d5",
+    "type": "copic marker"
+  },
+  {
+    "code": "R12",
+    "name": "Light Tea Rose",
+    "hex": "#fcd3c1",
+    "type": "copic marker"
+  },
+  {
+    "code": "R14",
+    "name": "Light Rouge",
+    "hex": "#f59b92",
+    "type": "copic marker"
+  },
+  {
+    "code": "R17",
+    "name": "Lipstick Orange",
+    "hex": "#f4846c",
+    "type": "copic marker"
+  },
+  {
+    "code": "R20",
+    "name": "Blush",
+    "hex": "#fcd7cf",
+    "type": "copic marker"
+  },
+  {
+    "code": "R21",
+    "name": "Sardonyx",
+    "hex": "#fac1b6",
+    "type": "copic marker"
+  },
+  {
+    "code": "R22",
+    "name": "Light Prawn",
+    "hex": "#f8b7b1",
+    "type": "copic marker"
+  },
+  {
+    "code": "R24",
+    "name": "Prawn",
+    "hex": "#f27579",
+    "type": "copic marker"
+  },
+  {
+    "code": "R27",
+    "name": "Cadmium Red",
+    "hex": "#f15062",
+    "type": "copic marker"
+  },
+  {
+    "code": "R29",
+    "name": "Lipstick Red",
+    "hex": "#ed174b",
+    "type": "copic marker"
+  },
+  {
+    "code": "R30",
+    "name": "Pale Yellowish Pink",
+    "hex": "#fce3df",
+    "type": "copic marker"
+  },
+  {
+    "code": "R32",
+    "name": "Peach",
+    "hex": "#fac1ba",
+    "type": "copic marker"
+  },
+  {
+    "code": "R35",
+    "name": "Coral",
+    "hex": "#f27185",
+    "type": "copic marker"
+  },
+  {
+    "code": "R37",
+    "name": "Carmine",
+    "hex": "#e86c74",
+    "type": "copic marker"
+  },
+  {
+    "code": "R39",
+    "name": "Garnet",
+    "hex": "#cb487a",
+    "type": "copic marker"
+  },
+  {
+    "code": "R43",
+    "name": "Bougainvillaea",
+    "hex": "#ee848e",
+    "type": "copic marker"
+  },
+  {
+    "code": "R46",
+    "name": "Strong Red",
+    "hex": "#e04d69",
+    "type": "copic marker"
+  },
+  {
+    "code": "R56",
+    "name": "Currant",
+    "hex": "#d27c95",
+    "type": "copic marker"
+  },
+  {
+    "code": "R59",
+    "name": "Cardinal",
+    "hex": "#b74f70",
+    "type": "copic marker"
+  },
+  {
+    "code": "R81",
+    "name": "Rose Pink",
+    "hex": "#f1c8d6",
+    "type": "copic marker"
+  },
+  {
+    "code": "R83",
+    "name": "Rose Mist",
+    "hex": "#f19cb9",
+    "type": "copic marker"
+  },
+  {
+    "code": "R85",
+    "name": "Rose Red",
+    "hex": "#d36a93",
+    "type": "copic marker"
+  },
+  {
+    "code": "R89",
+    "name": "Dark Red",
+    "hex": "#7d2b42",
+    "type": "copic marker"
+  },
+  {
+    "code": "RV0000",
+    "name": "Evening Primrose",
+    "hex": "#f2eaf5",
+    "type": "copic marker"
+  },
+  {
+    "code": "RV000",
+    "name": "Pale Purple",
+    "hex": "#f4e2ee",
+    "type": "copic marker"
+  },
+  {
+    "code": "RV00",
+    "name": "Water Lily",
+    "hex": "#f1daea",
+    "type": "copic marker"
+  },
+  {
+    "code": "RV02",
+    "name": "Sugared Almond Pink",
+    "hex": "#fad5e6",
+    "type": "copic marker"
+  },
+  {
+    "code": "RV04",
+    "name": "Shock Pink",
+    "hex": "#f6a3bf",
+    "type": "copic marker"
+  },
+  {
+    "code": "RV06",
+    "name": "Cerise",
+    "hex": "#f386af",
+    "type": "copic marker"
+  },
+  {
+    "code": "RV09",
+    "name": "Fuchsia",
+    "hex": "#DF6EA6",
+    "type": "copic marker"
+  },
+  {
+    "code": "RV10",
+    "name": "Pale Pink",
+    "hex": "#fdecf4",
+    "type": "copic marker"
+  },
+  {
+    "code": "RV11",
+    "name": "Pink",
+    "hex": "#fbd6dd",
+    "type": "copic marker"
+  },
+  {
+    "code": "RV13",
+    "name": "Tender Pink",
+    "hex": "#f9c9d7",
+    "type": "copic marker"
+  },
+  {
+    "code": "RV14",
+    "name": "Begonia Pink",
+    "hex": "#f495b7",
+    "type": "copic marker"
+  },
+  {
+    "code": "RV17",
+    "name": "Deep Magenta",
+    "hex": "#db7eb3",
+    "type": "copic marker"
+  },
+  {
+    "code": "RV19",
+    "name": "Red Violet",
+    "hex": "#d268aa",
+    "type": "copic marker"
+  },
+  {
+    "code": "RV21",
+    "name": "Light Pink",
+    "hex": "#fde8e7",
+    "type": "copic marker"
+  },
+  {
+    "code": "RV23",
+    "name": "Pure Pink",
+    "hex": "#f8bac9",
+    "type": "copic marker"
+  },
+  {
+    "code": "RV25",
+    "name": "Dog Rose Flower",
+    "hex": "#f493be",
+    "type": "copic marker"
+  },
+  {
+    "code": "RV29",
+    "name": "Crimson",
+    "hex": "#ef4880",
+    "type": "copic marker"
+  },
+  {
+    "code": "RV32",
+    "name": "Shadow Pink",
+    "hex": "#fad3ce",
+    "type": "copic marker"
+  },
+  {
+    "code": "RV34",
+    "name": "Dark Pink",
+    "hex": "#f9afae",
+    "type": "copic marker"
+  },
+  {
+    "code": "RV42",
+    "name": "Salmon Pink",
+    "hex": "#f8bbb6",
+    "type": "copic marker"
+  },
+  {
+    "code": "RV52",
+    "name": "Cotton Candy",
+    "hex": "#f9cade",
+    "type": "copic marker"
+  },
+  {
+    "code": "RV55",
+    "name": "Hollyhock",
+    "hex": "#e9a5ca",
+    "type": "copic marker"
+  },
+  {
+    "code": "RV63",
+    "name": "Begonia",
+    "hex": "#d09dae",
+    "type": "copic marker"
+  },
+  {
+    "code": "RV66",
+    "name": "Raspberry",
+    "hex": "#b86a84",
+    "type": "copic marker"
+  },
+  {
+    "code": "RV69",
+    "name": "Peony",
+    "hex": "#8b576e",
+    "type": "copic marker"
+  },
+  {
+    "code": "RV91",
+    "name": "Grayish Cherry",
+    "hex": "#EDDDE9",
+    "type": "copic marker"
+  },
+  {
+    "code": "RV93",
+    "name": "Smoky Purple",
+    "hex": "#EABED1",
+    "type": "copic marker"
+  },
+  {
+    "code": "RV95",
+    "name": "Baby Blossoms",
+    "hex": "#b684a1",
+    "type": "copic marker"
+  },
+  {
+    "code": "RV99",
+    "name": "Argyle Purple",
+    "hex": "#5a4858",
+    "type": "copic marker"
+  },
+  {
+    "code": "T-0",
+    "name": "Toner Gray No. 0",
+    "hex": "#eceeed",
+    "type": "copic marker"
+  },
+  {
+    "code": "T-1",
+    "name": "Toner Gray No. 1",
+    "hex": "#eaeae8",
+    "type": "copic marker"
+  },
+  {
+    "code": "T-2",
+    "name": "Toner Gray No. 2",
+    "hex": "#e0e0de",
+    "type": "copic marker"
+  },
+  {
+    "code": "T-3",
+    "name": "Toner Gray No. 3",
+    "hex": "#d1d2cc",
+    "type": "copic marker"
+  },
+  {
+    "code": "T-4",
+    "name": "Toner Gray No. 4",
+    "hex": "#bcbbb9",
+    "type": "copic marker"
+  },
+  {
+    "code": "T-5",
+    "name": "Toner Gray No. 5",
+    "hex": "#a8a7a3",
+    "type": "copic marker"
+  },
+  {
+    "code": "T-6",
+    "name": "Toner Gray No. 6",
+    "hex": "#949590",
+    "type": "copic marker"
+  },
+  {
+    "code": "T-7",
+    "name": "Toner Gray No. 7",
+    "hex": "#777674",
+    "type": "copic marker"
+  },
+  {
+    "code": "T-8",
+    "name": "Toner Gray No. 8",
+    "hex": "#63645f",
+    "type": "copic marker"
+  },
+  {
+    "code": "T-9",
+    "name": "Toner Gray No. 9",
+    "hex": "#4c4b49",
+    "type": "copic marker"
+  },
+  {
+    "code": "T-10",
+    "name": "Toner Gray No. 10",
+    "hex": "#322e2d",
+    "type": "copic marker"
+  },
+  {
+    "code": "V0000",
+    "name": "Rose Quartz",
+    "hex": "#f0edf6",
+    "type": "copic marker"
+  },
+  {
+    "code": "V000",
+    "name": "Pale Heath",
+    "hex": "#e9e5f3",
+    "type": "copic marker"
+  },
+  {
+    "code": "V01",
+    "name": "Heath",
+    "hex": "#e4c1d9",
+    "type": "copic marker"
+  },
+  {
+    "code": "V04",
+    "name": "Lilac",
+    "hex": "#e6aace",
+    "type": "copic marker"
+  },
+  {
+    "code": "V05",
+    "name": "Lilac",
+    "hex": "#e2a6ca",
+    "type": "copic marker"
+  },
+  {
+    "code": "V06",
+    "name": "Lavender",
+    "hex": "#ce95c2",
+    "type": "copic marker"
+  },
+  {
+    "code": "V09",
+    "name": "Violet",
+    "hex": "#8754a1",
+    "type": "copic marker"
+  },
+  {
+    "code": "V12",
+    "name": "Pale Lilac",
+    "hex": "#eed7e9",
+    "type": "copic marker"
+  },
+  {
+    "code": "V15",
+    "name": "Mallow",
+    "hex": "#d3a6cd",
+    "type": "copic marker"
+  },
+  {
+    "code": "V17",
+    "name": "Amethyst",
+    "hex": "#a092c7",
+    "type": "copic marker"
+  },
+  {
+    "code": "V20",
+    "name": "Wisteria",
+    "hex": "#e2e0ed",
+    "type": "copic marker"
+  },
+  {
+    "code": "V22",
+    "name": "Ash Lavender",
+    "hex": "#b2b1d0",
+    "type": "copic marker"
+  },
+  {
+    "code": "V25",
+    "name": "Pale Blackberry",
+    "hex": "#857fad",
+    "type": "copic marker"
+  },
+  {
+    "code": "V28",
+    "name": "Eggplant",
+    "hex": "#6b668e",
+    "type": "copic marker"
+  },
+  {
+    "code": "V91",
+    "name": "Pale Grape",
+    "hex": "#e8c4d0",
+    "type": "copic marker"
+  },
+  {
+    "code": "V93",
+    "name": "Early Purple",
+    "hex": "#e5c1db",
+    "type": "copic marker"
+  },
+  {
+    "code": "V95",
+    "name": "Light Grape",
+    "hex": "#b77ca8",
+    "type": "copic marker"
+  },
+  {
+    "code": "V99",
+    "name": "Aubergine",
+    "hex": "#524358",
+    "type": "copic marker"
+  },
+  {
+    "code": "W-00",
+    "name": "Warm Gray No. 00",
+    "hex": "#F8F7F2",
+    "type": "copic marker"
+  },
+  {
+    "code": "W-0",
+    "name": "Warm Gray No. 0",
+    "hex": "#f3f3eb",
+    "type": "copic marker"
+  },
+  {
+    "code": "W-1",
+    "name": "Warm Gray No. 1",
+    "hex": "#e7e7df",
+    "type": "copic marker"
+  },
+  {
+    "code": "W-2",
+    "name": "Warm Gray No. 2",
+    "hex": "#ddddd5",
+    "type": "copic marker"
+  },
+  {
+    "code": "W-3",
+    "name": "Warm Gray No. 3",
+    "hex": "#d2d2ca",
+    "type": "copic marker"
+  },
+  {
+    "code": "W-4",
+    "name": "Warm Gray No. 4",
+    "hex": "#bcbdb7",
+    "type": "copic marker"
+  },
+  {
+    "code": "W-5",
+    "name": "Warm Gray No. 5",
+    "hex": "#a8a9a4",
+    "type": "copic marker"
+  },
+  {
+    "code": "W-6",
+    "name": "Warm Gray No. 6",
+    "hex": "#94958f",
+    "type": "copic marker"
+  },
+  {
+    "code": "W-7",
+    "name": "Warm Gray No. 7",
+    "hex": "#777873",
+    "type": "copic marker"
+  },
+  {
+    "code": "W-8",
+    "name": "Warm Gray No. 8",
+    "hex": "#63645f",
+    "type": "copic marker"
+  },
+  {
+    "code": "W-9",
+    "name": "Warm Gray No. 9",
+    "hex": "#4c4d48",
+    "type": "copic marker"
+  },
+  {
+    "code": "W-10",
+    "name": "Warm Gray No. 10",
+    "hex": "#302f2b",
+    "type": "copic marker"
+  },
+  {
+    "code": "Y0000",
+    "name": "Yellow Fluorite",
+    "hex": "#fefef4",
+    "type": "copic marker"
+  },
+  {
+    "code": "Y000",
+    "name": "Pale Lemon",
+    "hex": "#fffce9",
+    "type": "copic marker"
+  },
+  {
+    "code": "Y00",
+    "name": "Barium Yellow",
+    "hex": "#fefddf",
+    "type": "copic marker"
+  },
+  {
+    "code": "Y02",
+    "name": "Canary Yellow",
+    "hex": "#f6f396",
+    "type": "copic marker"
+  },
+  {
+    "code": "Y04",
+    "name": "Acacia",
+    "hex": "#ede556",
+    "type": "copic marker"
+  },
+  {
+    "code": "Y06",
+    "name": "Yellow",
+    "hex": "#fef56c",
+    "type": "copic marker"
+  },
+  {
+    "code": "Y08",
+    "name": "Acid Yellow",
+    "hex": "#fef200",
+    "type": "copic marker"
+  },
+  {
+    "code": "Y11",
+    "name": "Pale Yellow",
+    "hex": "#fffbcc",
+    "type": "copic marker"
+  },
+  {
+    "code": "Y13",
+    "name": "Lemon Yellow",
+    "hex": "#fbf7ae",
+    "type": "copic marker"
+  },
+  {
+    "code": "Y15",
+    "name": "Cadmium Yellow",
+    "hex": "#fee96c",
+    "type": "copic marker"
+  },
+  {
+    "code": "Y17",
+    "name": "Golden Yellow",
+    "hex": "#ffe455",
+    "type": "copic marker"
+  },
+  {
+    "code": "Y18",
+    "name": "Lightning Yellow",
+    "hex": "#feed55",
+    "type": "copic marker"
+  },
+  {
+    "code": "Y19",
+    "name": "Napoli Yellow",
+    "hex": "#ffe93e",
+    "type": "copic marker"
+  },
+  {
+    "code": "Y21",
+    "name": "Buttercup Yellow",
+    "hex": "#ffeec2",
+    "type": "copic marker"
+  },
+  {
+    "code": "Y23",
+    "name": "Yellowish Beige",
+    "hex": "#fbe3b3",
+    "type": "copic marker"
+  },
+  {
+    "code": "Y26",
+    "name": "Mustard",
+    "hex": "#f0dd67",
+    "type": "copic marker"
+  },
+  {
+    "code": "Y28",
+    "name": "Lionet Gold",
+    "hex": "#caa869",
+    "type": "copic marker"
+  },
+  {
+    "code": "Y32",
+    "name": "Cashmere",
+    "hex": "#f9dec0",
+    "type": "copic marker"
+  },
+  {
+    "code": "Y35",
+    "name": "Maize",
+    "hex": "#ffd879",
+    "type": "copic marker"
+  },
+  {
+    "code": "Y38",
+    "name": "Honey",
+    "hex": "#ffd274",
+    "type": "copic marker"
+  },
+  {
+    "code": "YG0000",
+    "name": "Lily White",
+    "hex": "#f2f7e0",
+    "type": "copic marker"
+  },
+  {
+    "code": "YG00",
+    "name": "Mimosa Yellow",
+    "hex": "#e6e69e",
+    "type": "copic marker"
+  },
+  {
+    "code": "YG01",
+    "name": "Green Bice",
+    "hex": "#e2ebb2",
+    "type": "copic marker"
+  },
+  {
+    "code": "YG03",
+    "name": "Yellow Green",
+    "hex": "#deeaaa",
+    "type": "copic marker"
+  },
+  {
+    "code": "YG05",
+    "name": "Salad",
+    "hex": "#d6e592",
+    "type": "copic marker"
+  },
+  {
+    "code": "YG06",
+    "name": "Yellowish Green",
+    "hex": "#c4df92",
+    "type": "copic marker"
+  },
+  {
+    "code": "YG07",
+    "name": "Acid Green",
+    "hex": "#a5cf4f",
+    "type": "copic marker"
+  },
+  {
+    "code": "YG09",
+    "name": "Lettuce Green",
+    "hex": "#82c566",
+    "type": "copic marker"
+  },
+  {
+    "code": "YG11",
+    "name": "Mignonette",
+    "hex": "#e5f0d0",
+    "type": "copic marker"
+  },
+  {
+    "code": "YG13",
+    "name": "Chartreuse",
+    "hex": "#d4e59f",
+    "type": "copic marker"
+  },
+  {
+    "code": "YG17",
+    "name": "Grass Green",
+    "hex": "#72c156",
+    "type": "copic marker"
+  },
+  {
+    "code": "YG21",
+    "name": "Anise",
+    "hex": "#f7f6be",
+    "type": "copic marker"
+  },
+  {
+    "code": "YG23",
+    "name": "New Leaf",
+    "hex": "#e6eb8f",
+    "type": "copic marker"
+  },
+  {
+    "code": "YG25",
+    "name": "Celadon Green",
+    "hex": "#d0e17b",
+    "type": "copic marker"
+  },
+  {
+    "code": "YG41",
+    "name": "Pale Cobalt Green",
+    "hex": "#d5ebd4",
+    "type": "copic marker"
+  },
+  {
+    "code": "YG45",
+    "name": "Cobalt Green",
+    "hex": "#b4dcb7",
+    "type": "copic marker"
+  },
+  {
+    "code": "YG61",
+    "name": "Pale Moss",
+    "hex": "#d6e9d6",
+    "type": "copic marker"
+  },
+  {
+    "code": "YG63",
+    "name": "Pea Green",
+    "hex": "#a0caa2",
+    "type": "copic marker"
+  },
+  {
+    "code": "YG67",
+    "name": "Moss",
+    "hex": "#81bf8c",
+    "type": "copic marker"
+  },
+  {
+    "code": "YG91",
+    "name": "Putty",
+    "hex": "#dad7ae",
+    "type": "copic marker"
+  },
+  {
+    "code": "YG93",
+    "name": "Grayish Yellow",
+    "hex": "#d2d29c",
+    "type": "copic marker"
+  },
+  {
+    "code": "YG95",
+    "name": "Pale Olive",
+    "hex": "#cbc65e",
+    "type": "copic marker"
+  },
+  {
+    "code": "YG97",
+    "name": "Spanish Olive",
+    "hex": "#958f03",
+    "type": "copic marker"
+  },
+  {
+    "code": "YG99",
+    "name": "Marine Green",
+    "hex": "#4e6a15",
+    "type": "copic marker"
+  },
+  {
+    "code": "YR0000",
+    "name": "Pale Chiffon",
+    "hex": "#fff3e5",
+    "type": "copic marker"
+  },
+  {
+    "code": "YR000",
+    "name": "Silk",
+    "hex": "#FEF0DF",
+    "type": "copic marker"
+  },
+  {
+    "code": "YR00",
+    "name": "Powder Pink",
+    "hex": "#fed6bd",
+    "type": "copic marker"
+  },
+  {
+    "code": "YR01",
+    "name": "Peach Puff",
+    "hex": "#fedac2",
+    "type": "copic marker"
+  },
+  {
+    "code": "YR02",
+    "name": "Light Orange",
+    "hex": "#fcddc5",
+    "type": "copic marker"
+  },
+  {
+    "code": "YR04",
+    "name": "Chrome Orange",
+    "hex": "#fec369",
+    "type": "copic marker"
+  },
+  {
+    "code": "YR07",
+    "name": "Cadmium Orange",
+    "hex": "#f26f39",
+    "type": "copic marker"
+  },
+  {
+    "code": "YR09",
+    "name": "Chinese Orange",
+    "hex": "#f15524",
+    "type": "copic marker"
+  },
+  {
+    "code": "YR12",
+    "name": "Loquat",
+    "hex": "#ffe2a6",
+    "type": "copic marker"
+  },
+  {
+    "code": "YR14",
+    "name": "Caramel",
+    "hex": "#fec84e",
+    "type": "copic marker"
+  },
+  {
+    "code": "YR15",
+    "name": "Pumpkin Yellow",
+    "hex": "#fbb884",
+    "type": "copic marker"
+  },
+  {
+    "code": "YR16",
+    "name": "Apricot",
+    "hex": "#feb729",
+    "type": "copic marker"
+  },
+  {
+    "code": "YR18",
+    "name": "Sanguine",
+    "hex": "#f26b3c",
+    "type": "copic marker"
+  },
+  {
+    "code": "YR20",
+    "name": "Yellowish Shade",
+    "hex": "#ffe1bf",
+    "type": "copic marker"
+  },
+  {
+    "code": "YR21",
+    "name": "Cream",
+    "hex": "#f5ddb1",
+    "type": "copic marker"
+  },
+  {
+    "code": "YR23",
+    "name": "Yellow Ochre",
+    "hex": "#eccf8b",
+    "type": "copic marker"
+  },
+  {
+    "code": "YR24",
+    "name": "Pale Sepia",
+    "hex": "#f0cf64",
+    "type": "copic marker"
+  },
+  {
+    "code": "YR27",
+    "name": "Tuscan Orange",
+    "hex": "#D56227",
+    "type": "copic marker"
+  },
+  {
+    "code": "YR30",
+    "name": "Macadamia Nut",
+    "hex": "#fef2da",
+    "type": "copic marker"
+  },
+  {
+    "code": "YR31",
+    "name": "Light Reddish Yellow",
+    "hex": "#ffdea8",
+    "type": "copic marker"
+  },
+  {
+    "code": "YR61",
+    "name": "Spring Orange",
+    "hex": "#fddac4",
+    "type": "copic marker"
+  },
+  {
+    "code": "YR65",
+    "name": "Atoll",
+    "hex": "#faae60",
+    "type": "copic marker"
+  },
+  {
+    "code": "YR68",
+    "name": "Orange",
+    "hex": "#f37022",
+    "type": "copic marker"
+  },
+  {
+    "code": "YR82",
+    "name": "Mellow Peach",
+    "hex": "#fdc68d",
+    "type": "copic marker"
+  }
+]
