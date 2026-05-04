@@ -1,8 +1,13 @@
 import { COMPOUND_COLORS, SIMPLE_COLORS } from '../data/colorKeywords'
+import { matchProduct } from './productMatcher'
 
 const COMPOUND_ENTRIES = Object.entries(COMPOUND_COLORS).sort((a, b) => b[0].length - a[0].length)
 
 export function detectColor(name) {
+  // Product files take priority over generic keyword detection
+  const product = matchProduct(name)
+  if (product) return { hex: product.hex, label: product.label }
+
   const normalized = name
     .toLowerCase()
     .replace(/[^a-z0-9\s]/g, ' ')
