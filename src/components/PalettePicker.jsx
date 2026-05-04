@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { pickRandom, pickByCategory, smartDistribute, evenDistribute } from '../utils/randomPicker'
+import { encodeShareLink } from '../utils/shareLink'
 
 const COUNT_KEY      = 'art-supplies-count'
 const CAT_MODE_KEY   = 'art-supplies-cat-mode'
@@ -35,6 +36,7 @@ export function PalettePicker({ supplies, onSaveFavorite }) {
   const [saving, setSaving]       = useState(false)
   const [favName, setFavName]     = useState('')
   const [saved, setSaved]         = useState(false)
+  const [copied, setCopied]       = useState(false)
 
   useEffect(() => { localStorage.setItem(COUNT_KEY, count) }, [count])
   useEffect(() => { localStorage.setItem(CAT_MODE_KEY, useCats) }, [useCats])
@@ -104,6 +106,14 @@ export function PalettePicker({ supplies, onSaveFavorite }) {
     setSaving(false)
     setFavName('')
     setSaved(false)
+    setCopied(false)
+  }
+
+  function handleCopyLink() {
+    navigator.clipboard.writeText(encodeShareLink(picks)).then(() => {
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    })
   }
 
   function handleSave(e) {
@@ -265,12 +275,20 @@ export function PalettePicker({ supplies, onSaveFavorite }) {
               >Cancel</button>
             </form>
           ) : (
-            <button
-              className="inline-flex items-center gap-1.5 bg-white text-ink border-[1.5px] border-border-dark rounded-lg px-3.5 py-2 text-[13px] font-medium min-h-[40px] hover:border-ink hover:bg-paper transition-colors cursor-pointer self-start"
-              onClick={() => setSaving(true)}
-            >
-              <StarIcon /> Save as Favorite
-            </button>
+            <div className="flex gap-2 flex-wrap">
+              <button
+                className="inline-flex items-center gap-1.5 bg-white text-ink border-[1.5px] border-border-dark rounded-lg px-3.5 py-2 text-[13px] font-medium min-h-[40px] hover:border-ink hover:bg-paper transition-colors cursor-pointer"
+                onClick={() => setSaving(true)}
+              >
+                <StarIcon /> Save as Favorite
+              </button>
+              <button
+                className="inline-flex items-center gap-1.5 bg-white text-ink border-[1.5px] border-border-dark rounded-lg px-3.5 py-2 text-[13px] font-medium min-h-[40px] hover:border-ink hover:bg-paper transition-colors cursor-pointer"
+                onClick={handleCopyLink}
+              >
+                <LinkIcon /> {copied ? 'Copied!' : 'Copy Share Link'}
+              </button>
+            </div>
           )}
         </div>
       )}
@@ -287,6 +305,15 @@ function DiceIcon() {
       <circle cx="8" cy="16" r="1.5" fill="currentColor" stroke="none"/>
       <circle cx="16" cy="16" r="1.5" fill="currentColor" stroke="none"/>
       <circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/>
+    </svg>
+  )
+}
+
+function LinkIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
     </svg>
   )
 }
