@@ -21,14 +21,14 @@ export function ImportExport({ supplies, onMerge }) {
   return (
     <div className="flex gap-2 flex-wrap items-center">
       <button
-        className="inline-flex items-center gap-1.5 bg-white text-ink border-[1.5px] border-border-dark rounded-lg px-3.5 py-2 text-[13px] font-medium min-h-[40px] hover:border-ink hover:bg-paper disabled:opacity-40 disabled:cursor-not-allowed transition-colors cursor-pointer"
+        className="inline-flex items-center gap-1.5 bg-white text-slate-900 border-[1.5px] border-slate-300 rounded-lg px-3.5 py-2 text-[13px] font-medium min-h-[40px] hover:border-slate-900 hover:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed transition-colors cursor-pointer"
         onClick={() => exportToJSON(supplies)}
         disabled={supplies.length === 0}
       >
         <DownloadIcon /> Export JSON
       </button>
       <button
-        className="inline-flex items-center gap-1.5 bg-white text-ink border-[1.5px] border-border-dark rounded-lg px-3.5 py-2 text-[13px] font-medium min-h-[40px] hover:border-ink hover:bg-paper transition-colors cursor-pointer"
+        className="inline-flex items-center gap-1.5 bg-white text-slate-900 border-[1.5px] border-slate-300 rounded-lg px-3.5 py-2 text-[13px] font-medium min-h-[40px] hover:border-slate-900 hover:bg-slate-50 transition-colors cursor-pointer"
         onClick={() => fileInputRef.current?.click()}
       >
         <UploadIcon /> Import JSON

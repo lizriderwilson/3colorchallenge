@@ -5,9 +5,9 @@ import { CSS } from '@dnd-kit/utilities'
 const CATEGORY_CYCLE = [null, 'highlight', 'midtone', 'shadow']
 
 const BADGE_STYLES = {
-  highlight: 'bg-amber-100 text-amber-700 border-amber-300',
-  midtone:   'bg-sky-100 text-sky-700 border-sky-300',
-  shadow:    'bg-slate-600 text-slate-100 border-slate-500',
+  highlight: 'bg-amber-100 text-amber-700 border-amber-200',
+  midtone:   'bg-rose-100 text-rose-700 border-amber-200',
+  shadow:    'bg-cyan-100 text-cyan-700 border-cyan-200',
 }
 
 const BADGE_LABELS = { highlight: 'H', midtone: 'M', shadow: 'S' }
@@ -21,7 +21,7 @@ function CategoryBadge({ category, onCycle }) {
   if (!category) {
     return (
       <button
-        className="text-[10px] font-medium rounded px-2 py-1 border border-dashed border-ink-faint text-ink-faint hover:border-ink-muted hover:text-ink-muted transition-colors cursor-pointer bg-transparent whitespace-nowrap"
+        className="text-[10px] font-medium rounded px-2 py-1 border border-dashed border-slate-300 text-slate-400 hover:border-slate-400 hover:text-slate-500 transition-colors cursor-pointer bg-transparent whitespace-nowrap"
         onClick={onCycle}
         title={title}
       >
@@ -70,12 +70,12 @@ export function SupplyCard({ supply, onRemove, onRename, onSetColor, onSetCatego
     <div
       ref={setNodeRef}
       style={{ transform: CSS.Transform.toString(transform), transition }}
-      className={`group flex items-center gap-2.5 px-2.5 py-2 rounded-lg min-h-[44px] hover:bg-paper transition-colors ${isDragging ? 'opacity-50 bg-paper z-10 shadow-md' : ''}`}
+      className={`group flex items-center gap-2.5 px-2.5 py-2 rounded-lg min-h-[44px] hover:bg-slate-50 transition-colors ${isDragging ? 'opacity-50 bg-slate-50 z-10 shadow-md' : ''}`}
     >
 
       {/* Drag handle */}
       <button
-        className="flex-shrink-0 text-ink-faint hover:text-ink-muted opacity-0 group-hover:opacity-100 transition-opacity cursor-grab active:cursor-grabbing touch-none bg-transparent border-0 p-1.5 -ml-1"
+        className="flex-shrink-0 text-slate-400 hover:text-slate-500 opacity-0 group-hover:opacity-100 transition-opacity cursor-grab active:cursor-grabbing touch-none bg-transparent border-0 p-1.5 -ml-1"
         {...attributes}
         {...listeners}
         tabIndex={-1}
@@ -86,7 +86,7 @@ export function SupplyCard({ supply, onRemove, onRename, onSetColor, onSetCatego
 
       {/* Swatch — click to open color picker */}
       <button
-        className="relative flex-shrink-0 w-[18px] h-[18px] rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-terra"
+        className="relative flex-shrink-0 w-[18px] h-[18px] rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500"
         style={{ background: hasColor ? supply.colorHex : 'transparent' }}
         onClick={() => colorInputRef.current?.click()}
         title={hasColor ? 'Change color' : 'Set color'}
@@ -94,7 +94,7 @@ export function SupplyCard({ supply, onRemove, onRename, onSetColor, onSetCatego
       >
         <span
           className={`absolute inset-0 rounded-full ${
-            hasColor ? 'border border-black/10' : 'border-2 border-dashed border-border-dark'
+            hasColor ? 'border border-black/10' : 'border-2 border-dashed border-slate-300'
           }`}
         />
         <span className="absolute inset-0 flex items-center justify-center rounded-full bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
@@ -113,7 +113,7 @@ export function SupplyCard({ supply, onRemove, onRename, onSetColor, onSetCatego
       {/* Name / rename input */}
       {editing ? (
         <input
-          className="flex-1 border-[1.5px] border-terra rounded-md px-2 py-1 text-sm text-ink bg-white outline-none min-w-0"
+          className="flex-1 border-[1.5px] border-cyan-500 rounded-md px-2 py-1 text-sm text-slate-900 bg-white outline-none min-w-0"
           value={draft}
           onChange={e => setDraft(e.target.value)}
           onKeyDown={handleKeyDown}
@@ -121,7 +121,7 @@ export function SupplyCard({ supply, onRemove, onRename, onSetColor, onSetCatego
           autoFocus
         />
       ) : (
-        <span className="flex-1 text-sm text-ink min-w-0 overflow-hidden text-ellipsis whitespace-nowrap">
+        <span className="flex-1 text-sm text-slate-900 min-w-0 overflow-hidden text-ellipsis whitespace-nowrap">
           {supply.name}
         </span>
       )}
@@ -129,7 +129,7 @@ export function SupplyCard({ supply, onRemove, onRename, onSetColor, onSetCatego
       {/* "Set color" prompt — only when no color */}
       {!hasColor && !editing && (
         <button
-          className="text-[11px] text-terra font-medium whitespace-nowrap hover:underline bg-transparent border-0 cursor-pointer px-0 shrink-0"
+          className="text-[11px] text-cyan-600 font-medium whitespace-nowrap hover:underline bg-transparent border-0 cursor-pointer px-0 shrink-0"
           onClick={() => colorInputRef.current?.click()}
         >
           Set color
@@ -150,22 +150,22 @@ export function SupplyCard({ supply, onRemove, onRename, onSetColor, onSetCatego
         {editing ? (
           <>
             <button
-              className="flex items-center justify-center bg-transparent border-0 cursor-pointer text-ink-muted w-10 h-10 rounded-md hover:bg-paper hover:text-ink transition-colors text-sm"
+              className="flex items-center justify-center bg-transparent border-0 cursor-pointer text-slate-500 w-10 h-10 rounded-md hover:bg-slate-50 hover:text-slate-900 transition-colors text-sm"
               onClick={handleSave} title="Save"
             >✓</button>
             <button
-              className="flex items-center justify-center bg-transparent border-0 cursor-pointer text-ink-muted w-10 h-10 rounded-md hover:bg-paper hover:text-ink transition-colors text-sm"
+              className="flex items-center justify-center bg-transparent border-0 cursor-pointer text-slate-500 w-10 h-10 rounded-md hover:bg-slate-50 hover:text-slate-900 transition-colors text-sm"
               onClick={() => { setDraft(supply.name); setEditing(false) }} title="Cancel"
             >✕</button>
           </>
         ) : (
           <>
             <button
-              className="flex items-center justify-center bg-transparent border-0 cursor-pointer text-ink-muted w-10 h-10 rounded-md hover:bg-paper hover:text-ink transition-colors"
+              className="flex items-center justify-center bg-transparent border-0 cursor-pointer text-slate-500 w-10 h-10 rounded-md hover:bg-slate-50 hover:text-slate-900 transition-colors"
               onClick={() => { setDraft(supply.name); setEditing(true) }} title="Rename"
             ><PencilIcon /></button>
             <button
-              className="flex items-center justify-center bg-transparent border-0 cursor-pointer text-ink-muted w-10 h-10 rounded-md hover:bg-red-50 hover:text-red-700 transition-colors"
+              className="flex items-center justify-center bg-transparent border-0 cursor-pointer text-slate-500 w-10 h-10 rounded-md hover:bg-red-50 hover:text-red-700 transition-colors"
               onClick={() => onRemove(supply.id)} title="Remove"
             ><TrashIcon /></button>
           </>

@@ -1,20 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-paper: #FAF8F4;
-  --color-ink: #1C1917;
-  --color-ink-muted: #78716C;
-  --color-ink-faint: #A8A29E;
-  --color-border: #E7E2D9;
-  --color-border-dark: #C8C0B4;
-  --color-terra: #C1440E;
-  --color-terra-dark: #A03A0C;
-  --color-teal: #2C6E8A;
-  --color-teal-light: #E2EFF4;
-  --color-teal-border: #B5D4E0;
-
-  --font-display: 'Playfair Display', Georgia, serif;
+  --font-display: 'Quicksand', system-ui, sans-serif;
   --font-body: 'DM Sans', system-ui, sans-serif;
 
   --animate-fade-slide-in: fadeSlideIn 0.25s ease both;
@@ -25,8 +13,8 @@
 @layer base {
   body {
     font-family: var(--font-body);
-    background-color: var(--color-paper);
-    color: var(--color-ink);
+    background: white;
+    color: theme(colors.slate.900);
     -webkit-font-smoothing: antialiased;
   }
 }
@@ -49,4 +37,4 @@
 /* Scrollbar styling — not achievable with Tailwind utilities */
 .styled-scroll::-webkit-scrollbar       { width: 6px; }
 .styled-scroll::-webkit-scrollbar-track { background: transparent; }
-.styled-scroll::-webkit-scrollbar-thumb { background: var(--color-border-dark); border-radius: 3px; }
+.styled-scroll::-webkit-scrollbar-thumb { background: theme(colors.slate.300); border-radius: 3px; }

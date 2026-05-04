@@ -7,9 +7,9 @@ const CAT_MODE_KEY   = 'art-supplies-cat-mode'
 const CAT_COUNTS_KEY = 'art-supplies-cat-counts'
 
 const CATEGORY_STYLES = {
-  highlight: 'bg-amber-100 text-amber-700 border-amber-300',
-  midtone:   'bg-sky-100 text-sky-700 border-sky-300',
-  shadow:    'bg-slate-600 text-slate-100 border-slate-500',
+  highlight: 'bg-amber-100 text-amber-700 border-amber-200',
+  midtone:   'bg-rose-100 text-rose-700 border-amber-200',
+  shadow:    'bg-cyan-100 text-cyan-700 border-cyan-200',
 }
 const BADGE_LABELS = { highlight: 'H', midtone: 'M', shadow: 'S' }
 
@@ -142,24 +142,24 @@ export function PalettePicker({ supplies, onSaveFavorite }) {
   const gridCols = picks.length <= 3 ? 'grid-cols-3' : 'grid-cols-4'
 
   return (
-    <div className="bg-white border-[1.5px] border-border rounded-xl p-6 flex flex-col gap-4">
+    <div className="bg-white border-[1.5px] border-slate-200 rounded-xl p-6 flex flex-col gap-4">
 
       {/* Title + slider */}
       <div className="flex flex-col gap-3">
-        <h2 className="font-display text-xl font-semibold text-ink">Pick Random Colors</h2>
+        <h2 className="font-display text-xl font-semibold text-slate-900">Pick Random Colors ✨</h2>
         <div className="flex flex-col gap-1.5">
           <div className="flex justify-between items-baseline">
-            <label className="text-xs font-medium uppercase tracking-[0.08em] text-ink-muted">
+            <label className="text-xs font-medium uppercase tracking-[0.08em] text-slate-500">
               How many?
             </label>
-            <span className="text-sm font-semibold text-ink tabular-nums">{sliderValue}</span>
+            <span className="text-sm font-semibold text-slate-900 tabular-nums">{sliderValue}</span>
           </div>
           <input
             type="range" min={1} max={Math.max(1, sliderMax)} value={Math.min(sliderValue, sliderMax)}
             onChange={e => handleSlider(Number(e.target.value))}
-            className="w-full accent-terra cursor-pointer"
+            className="w-full accent-cyan-500 cursor-pointer"
           />
-          <div className="flex justify-between text-[11px] text-ink-faint">
+          <div className="flex justify-between text-[11px] text-slate-400">
             <span>1</span><span>{Math.max(1, sliderMax)}</span>
           </div>
         </div>
@@ -169,18 +169,18 @@ export function PalettePicker({ supplies, onSaveFavorite }) {
       <label className="flex items-center gap-2.5 cursor-pointer select-none">
         <input
           type="checkbox"
-          className="w-4 h-4 accent-terra cursor-pointer"
+          className="w-4 h-4 accent-cyan-500 cursor-pointer"
           checked={useCats}
           onChange={e => handleToggleCats(e.target.checked)}
         />
-        <span className="text-sm text-ink-muted">Use highlight / midtone / shadow categories</span>
+        <span className="text-sm text-slate-500">Use highlight / midtone / shadow categories</span>
       </label>
 
       {/* Per-category steppers */}
       {useCats && (
         <div className="flex flex-col gap-3 animate-fade-slide-in">
           {categorizedCount === 0 ? (
-            <p className="text-sm text-ink-muted bg-paper border border-border rounded-lg px-3.5 py-2.5">
+            <p className="text-sm text-slate-500 bg-slate-50 border border-slate-200 rounded-lg px-3.5 py-2.5">
               No supplies have categories assigned yet. Use the H / M / S badges in your supply list to assign some.
             </p>
           ) : (
@@ -195,20 +195,20 @@ export function PalettePicker({ supplies, onSaveFavorite }) {
                       <span className={`text-[10px] font-semibold rounded px-1.5 py-0.5 border flex-shrink-0 ${CATEGORY_STYLES[cat]}`}>
                         {BADGE_LABELS[cat]}
                       </span>
-                      <span className="text-sm text-ink capitalize flex-1">{cat}</span>
-                      <span className="text-xs text-ink-faint">{avail} available</span>
+                      <span className="text-sm text-slate-900 capitalize flex-1">{cat}</span>
+                      <span className="text-xs text-slate-400">{avail} available</span>
 
-                      <div className="flex items-center border-[1.5px] border-border-dark rounded-lg overflow-hidden flex-shrink-0">
+                      <div className="flex items-center border-[1.5px] border-slate-300 rounded-lg overflow-hidden flex-shrink-0">
                         <button
-                          className="px-2.5 py-1.5 text-sm text-ink-muted hover:bg-paper hover:text-ink disabled:opacity-30 disabled:cursor-not-allowed transition-colors bg-transparent border-0 cursor-pointer"
+                          className="px-2.5 py-1.5 text-sm text-slate-500 hover:bg-slate-50 hover:text-slate-900 disabled:opacity-30 disabled:cursor-not-allowed transition-colors bg-transparent border-0 cursor-pointer"
                           onClick={() => handleCatCount(cat, val - 1)}
                           disabled={val <= 0}
                         >−</button>
-                        <span className="px-2.5 text-sm font-semibold text-ink min-w-[2rem] text-center tabular-nums select-none">
+                        <span className="px-2.5 text-sm font-semibold text-slate-900 min-w-[2rem] text-center tabular-nums select-none">
                           {val}
                         </span>
                         <button
-                          className="px-2.5 py-1.5 text-sm text-ink-muted hover:bg-paper hover:text-ink disabled:opacity-30 disabled:cursor-not-allowed transition-colors bg-transparent border-0 cursor-pointer"
+                          className="px-2.5 py-1.5 text-sm text-slate-500 hover:bg-slate-50 hover:text-slate-900 disabled:opacity-30 disabled:cursor-not-allowed transition-colors bg-transparent border-0 cursor-pointer"
                           onClick={() => handleCatCount(cat, val + 1)}
                           disabled={val >= avail || totalCatCount >= sliderMax}
                         >+</button>
@@ -220,7 +220,7 @@ export function PalettePicker({ supplies, onSaveFavorite }) {
 
               {!isEven && (
                 <button
-                  className="text-xs text-ink-muted hover:text-ink underline bg-transparent border-0 cursor-pointer self-start"
+                  className="text-xs text-slate-500 hover:text-slate-900 underline bg-transparent border-0 cursor-pointer self-start"
                   onClick={() => setCatCounts(smartDistribute(totalCatCount, available))}
                 >
                   Reset to even distribution
@@ -233,7 +233,7 @@ export function PalettePicker({ supplies, onSaveFavorite }) {
 
       <div className="flex flex-col gap-1.5">
         <button
-          className="flex items-center justify-center gap-2 bg-terra text-white rounded-[10px] px-6 py-3.5 text-[15px] font-medium min-h-[48px] hover:bg-terra-dark active:scale-[0.98] disabled:opacity-40 disabled:cursor-not-allowed transition-all cursor-pointer w-full"
+          className="flex items-center justify-center gap-2 bg-cyan-500 text-white rounded-[10px] px-6 py-3.5 text-[15px] font-medium min-h-[48px] hover:bg-cyan-600 active:scale-[0.98] disabled:opacity-40 disabled:cursor-not-allowed transition-all cursor-pointer w-full"
           onClick={handlePick}
           disabled={!canPick}
         >
@@ -241,8 +241,8 @@ export function PalettePicker({ supplies, onSaveFavorite }) {
           Pick {totalCount} Random {totalCount === 1 ? 'Color' : 'Colors'}
         </button>
         {canPick && (
-          <p className="text-center text-[11px] text-ink-faint hidden sm:block select-none">
-            or press <kbd className="font-mono text-[10px] bg-paper border border-border rounded px-1 py-0.5">Space</kbd>
+          <p className="text-center text-[11px] text-slate-400 hidden sm:block select-none">
+            or press <kbd className="font-mono text-[10px] bg-slate-50 border border-slate-200 rounded px-1 py-0.5">Space</kbd>
           </p>
         )}
       </div>
@@ -254,13 +254,13 @@ export function PalettePicker({ supplies, onSaveFavorite }) {
             {picks.map(supply => (
               <div
                 key={supply.id}
-                className="flex flex-col items-center gap-2 p-3 bg-paper border-[1.5px] border-border rounded-[10px]"
+                className="flex flex-col items-center gap-2 p-3 bg-slate-50 border-[1.5px] border-slate-200 rounded-[10px]"
               >
                 <div
                   className="w-12 h-12 rounded-full border-2 border-black/[0.06] flex-shrink-0"
                   style={{ background: supply.colorHex || '#C8C4BC' }}
                 />
-                <span className="text-[12px] text-ink font-medium text-center leading-tight">
+                <span className="text-[12px] text-slate-900 font-medium text-center leading-tight">
                   {supply.name}
                 </span>
                 {supply.category && (
@@ -273,11 +273,11 @@ export function PalettePicker({ supplies, onSaveFavorite }) {
           </div>
 
           {saved ? (
-            <p className="text-sm text-teal font-medium">Saved to favorites ✓</p>
+            <p className="text-sm text-cyan-600 font-medium">🎉 Saved to favorites!</p>
           ) : saving ? (
             <form className="flex gap-2 items-center flex-wrap" onSubmit={handleSave}>
               <input
-                className="flex-1 min-w-0 border-[1.5px] border-border-dark rounded-lg px-3 py-2 text-sm text-ink bg-white min-h-[40px] outline-none focus:border-terra transition-colors"
+                className="flex-1 min-w-0 border-[1.5px] border-slate-300 rounded-lg px-3 py-2 text-sm text-slate-900 bg-white min-h-[40px] outline-none focus:border-cyan-500 transition-colors"
                 value={favName}
                 onChange={e => setFavName(e.target.value)}
                 placeholder="Name this palette…"
@@ -285,25 +285,25 @@ export function PalettePicker({ supplies, onSaveFavorite }) {
               />
               <button
                 type="submit"
-                className="bg-terra text-white rounded-lg px-4 py-2 text-sm font-medium min-h-[40px] hover:bg-terra-dark disabled:opacity-40 disabled:cursor-not-allowed transition-colors cursor-pointer whitespace-nowrap"
+                className="bg-cyan-500 text-white rounded-lg px-4 py-2 text-sm font-medium min-h-[40px] hover:bg-cyan-600 disabled:opacity-40 disabled:cursor-not-allowed transition-colors cursor-pointer whitespace-nowrap"
                 disabled={!favName.trim()}
               >Save</button>
               <button
                 type="button"
-                className="text-ink-muted text-sm px-3 py-2 min-h-[40px] rounded-lg hover:text-ink hover:bg-paper transition-colors cursor-pointer bg-transparent border-0"
+                className="text-slate-500 text-sm px-3 py-2 min-h-[40px] rounded-lg hover:text-slate-900 hover:bg-slate-50 transition-colors cursor-pointer bg-transparent border-0"
                 onClick={() => setSaving(false)}
               >Cancel</button>
             </form>
           ) : (
             <div className="flex gap-2 flex-wrap">
               <button
-                className="inline-flex items-center gap-1.5 bg-white text-ink border-[1.5px] border-border-dark rounded-lg px-3.5 py-2 text-[13px] font-medium min-h-[40px] hover:border-ink hover:bg-paper transition-colors cursor-pointer"
+                className="inline-flex items-center gap-1.5 bg-white text-slate-900 border-[1.5px] border-slate-300 rounded-lg px-3.5 py-2 text-[13px] font-medium min-h-[40px] hover:border-slate-900 hover:bg-slate-50 transition-colors cursor-pointer"
                 onClick={() => setSaving(true)}
               >
                 <StarIcon /> Save as Favorite
               </button>
               <button
-                className="inline-flex items-center gap-1.5 bg-white text-ink border-[1.5px] border-border-dark rounded-lg px-3.5 py-2 text-[13px] font-medium min-h-[40px] hover:border-ink hover:bg-paper transition-colors cursor-pointer"
+                className="inline-flex items-center gap-1.5 bg-white text-slate-900 border-[1.5px] border-slate-300 rounded-lg px-3.5 py-2 text-[13px] font-medium min-h-[40px] hover:border-slate-900 hover:bg-slate-50 transition-colors cursor-pointer"
                 onClick={handleCopyLink}
               >
                 <LinkIcon /> {copied ? 'Copied!' : 'Copy Share Link'}

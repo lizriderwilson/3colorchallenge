@@ -8,11 +8,10 @@ export function FavoritesList({ favorites, onRemove }) {
   return (
     <div className="flex flex-col">
       <button
-        className="flex items-center gap-2 bg-transparent border-[1.5px] border-border rounded-[10px] px-4 py-3 text-sm font-medium text-ink cursor-pointer w-full text-left hover:border-border-dark hover:bg-white transition-colors min-h-[44px]"
+        className="flex items-center gap-2 bg-transparent border-[1.5px] border-slate-200 rounded-[10px] px-4 py-3 text-sm font-medium text-slate-900 cursor-pointer w-full text-left hover:border-slate-300 hover:bg-white transition-colors min-h-[44px]"
         onClick={() => setOpen(o => !o)}
       >
-        <StarIcon />
-        <span className="flex-1">Saved Palettes ({favorites.length})</span>
+        <span className="flex-1">⭐ Saved Palettes ({favorites.length})</span>
         <ChevronIcon open={open} />
       </button>
 
@@ -21,15 +20,15 @@ export function FavoritesList({ favorites, onRemove }) {
           {favorites.map(fav => (
             <div
               key={fav.id}
-              className="bg-white border-[1.5px] border-border rounded-[10px] px-4 py-3.5 flex flex-col gap-2.5"
+              className="bg-white border-[1.5px] border-slate-200 rounded-[10px] px-4 py-3.5 flex flex-col gap-2.5"
             >
               <div className="flex items-center gap-2">
-                <span className="flex-1 text-sm font-medium text-ink">{fav.name}</span>
-                <span className="text-xs text-ink-faint">
+                <span className="flex-1 text-sm font-medium text-slate-900">{fav.name}</span>
+                <span className="text-xs text-slate-400">
                   {new Date(fav.createdAt).toLocaleDateString()}
                 </span>
                 <button
-                  className="flex items-center justify-center bg-transparent border-0 cursor-pointer text-ink-muted w-10 h-10 rounded-md hover:bg-red-50 hover:text-red-700 transition-colors flex-shrink-0"
+                  className="flex items-center justify-center bg-transparent border-0 cursor-pointer text-slate-500 w-10 h-10 rounded-md hover:bg-red-50 hover:text-red-700 transition-colors flex-shrink-0"
                   onClick={() => onRemove(fav.id)}
                   title="Delete favorite"
                 >
@@ -43,7 +42,7 @@ export function FavoritesList({ favorites, onRemove }) {
                       className="w-3.5 h-3.5 rounded-full border border-black/10 flex-shrink-0 block"
                       style={{ background: p.colorHex || '#C8C4BC' }}
                     />
-                    <span className="text-[13px] text-ink-muted">{p.name}</span>
+                    <span className="text-[13px] text-slate-500">{p.name}</span>
                   </div>
                 ))}
               </div>

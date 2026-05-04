@@ -9,9 +9,9 @@ import { FavoritesList } from './components/FavoritesList'
 import { decodeShareLink } from './utils/shareLink'
 
 const CATEGORY_STYLES = {
-  highlight: 'bg-amber-100 text-amber-700 border-amber-300',
-  midtone:   'bg-sky-100 text-sky-700 border-sky-300',
-  shadow:    'bg-slate-600 text-slate-100 border-slate-500',
+  highlight: 'bg-amber-100 text-amber-700 border-amber-200',
+  midtone:   'bg-rose-100 text-rose-700 border-amber-200',
+  shadow:    'bg-cyan-100 text-cyan-700 border-cyan-200',
 }
 
 export default function App() {
@@ -31,15 +31,15 @@ export default function App() {
 
   return (
     <div className="max-w-[640px] mx-auto px-4 pb-20 min-h-screen">
-      <header className="flex items-center justify-between gap-3 py-6 border-b-[1.5px] border-border mb-8 flex-wrap">
+      <header className="flex items-center justify-between gap-3 py-6 border-b-[1.5px] border-slate-200 mb-8 flex-wrap">
         <div className="flex items-center gap-3">
           <div className="flex gap-[3px] items-end" aria-hidden="true">
-            <span className="block w-2.5 rounded-t-sm" style={{ height: 22, background: '#C1440E' }} />
-            <span className="block w-2.5 rounded-t-sm" style={{ height: 16, background: '#2C6E8A' }} />
-            <span className="block w-2.5 rounded-t-sm" style={{ height: 28, background: '#D4A843' }} />
+            <span className="block w-2.5 rounded-t-sm" style={{ height: 22, background: '#06b6d4' }} />
+            <span className="block w-2.5 rounded-t-sm" style={{ height: 16, background: '#fb7185' }} />
+            <span className="block w-2.5 rounded-t-sm" style={{ height: 28, background: '#fbbf24' }} />
           </div>
-          <h1 className="font-display text-[22px] font-bold text-ink tracking-[-0.3px]">
-            3 Color Challenge
+          <h1 className="font-display text-[22px] font-bold text-slate-900 tracking-[-0.3px]">
+            3 Color Challenge 🎨
           </h1>
         </div>
         {supplies.length > 0 && (
@@ -49,11 +49,11 @@ export default function App() {
 
       <main className="flex flex-col gap-8">
         {sharedPalette && (
-          <div className="bg-white border-[1.5px] border-border rounded-xl p-6 flex flex-col gap-4 animate-fade-slide-in">
+          <div className="bg-white border-[1.5px] border-slate-200 rounded-xl p-6 flex flex-col gap-4 animate-fade-slide-in">
             <div className="flex items-baseline justify-between gap-3">
-              <h2 className="font-display text-xl font-semibold text-ink">Shared Palette</h2>
+              <h2 className="font-display text-xl font-semibold text-slate-900">✨ Shared Palette</h2>
               <button
-                className="text-xs text-ink-muted hover:text-ink transition-colors bg-transparent border-0 cursor-pointer"
+                className="text-xs text-slate-500 hover:text-slate-900 transition-colors bg-transparent border-0 cursor-pointer"
                 onClick={() => setSharedPalette(null)}
               >
                 Dismiss
@@ -63,13 +63,13 @@ export default function App() {
               {sharedPalette.map((item, i) => (
                 <div
                   key={i}
-                  className="flex flex-col items-center gap-2 p-3 bg-paper border-[1.5px] border-border rounded-[10px]"
+                  className="flex flex-col items-center gap-2 p-3 bg-slate-50 border-[1.5px] border-slate-200 rounded-[10px]"
                 >
                   <div
                     className="w-12 h-12 rounded-full border-2 border-black/[0.06] flex-shrink-0"
                     style={{ background: item.h || '#C8C4BC' }}
                   />
-                  <span className="text-[12px] text-ink font-medium text-center leading-tight">
+                  <span className="text-[12px] text-slate-900 font-medium text-center leading-tight">
                     {item.n}
                   </span>
                   {item.c && (

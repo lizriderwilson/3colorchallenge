@@ -18,16 +18,16 @@ export function SupplyList({ supplies, onRemove, onRename, onSetColor, onSetCate
   return (
     <div className="flex flex-col">
       <div className="flex items-baseline justify-between mb-2.5">
-        <p className="text-xs font-medium uppercase tracking-[0.08em] text-ink-muted">
+        <p className="text-xs font-medium uppercase tracking-[0.08em] text-slate-500">
           Your Supplies
         </p>
-        <span className="text-xs text-ink-faint font-medium">
+        <span className="text-xs text-slate-400 font-medium">
           {supplies.length} {supplies.length === 1 ? 'supply' : 'supplies'}
         </span>
       </div>
       <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
         <SortableContext items={supplies.map(s => s.id)} strategy={verticalListSortingStrategy}>
-          <div className="flex flex-col gap-1 max-h-[360px] overflow-y-auto border-[1.5px] border-border rounded-xl p-1.5 bg-white styled-scroll">
+          <div className="flex flex-col gap-1 max-h-[360px] overflow-y-auto border-[1.5px] border-slate-200 rounded-xl p-1.5 bg-white styled-scroll">
             {supplies.map(s => (
               <SupplyCard
                 key={s.id}
