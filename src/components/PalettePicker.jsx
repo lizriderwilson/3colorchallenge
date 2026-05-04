@@ -1,46 +1,104 @@
 import { useState, useEffect } from 'react'
-import { pickRandom, pickByCategory, emptyCategoryBuckets } from '../utils/randomPicker'
+import { pickRandom, pickByCategory, smartDistribute, evenDistribute } from '../utils/randomPicker'
 
-const COUNT_KEY = 'art-supplies-count'
-const CAT_MODE_KEY = 'art-supplies-cat-mode'
+const COUNT_KEY      = 'art-supplies-count'
+const CAT_MODE_KEY   = 'art-supplies-cat-mode'
+const CAT_COUNTS_KEY = 'art-supplies-cat-counts'
 
 const CATEGORY_STYLES = {
   highlight: 'bg-amber-100 text-amber-700 border-amber-300',
   midtone:   'bg-sky-100 text-sky-700 border-sky-300',
   shadow:    'bg-slate-600 text-slate-100 border-slate-500',
 }
+const BADGE_LABELS = { highlight: 'H', midtone: 'M', shadow: 'S' }
 
 function loadCount() {
   const n = parseInt(localStorage.getItem(COUNT_KEY), 10)
   return n >= 1 && n <= 16 ? n : 3
 }
-
 function loadCatMode() {
   return localStorage.getItem(CAT_MODE_KEY) === 'true'
 }
+function loadCatCounts() {
+  try {
+    const raw = localStorage.getItem(CAT_COUNTS_KEY)
+    if (raw) return JSON.parse(raw)
+  } catch {}
+  return evenDistribute(3)
+}
 
 export function PalettePicker({ supplies, onSaveFavorite }) {
-  const [count, setCount] = useState(loadCount)
-  const [useCats, setUseCats] = useState(loadCatMode)
-  const [picks, setPicks] = useState([])
-  const [saving, setSaving] = useState(false)
-  const [favName, setFavName] = useState('')
-  const [saved, setSaved] = useState(false)
+  const [count, setCount]         = useState(loadCount)
+  const [useCats, setUseCats]     = useState(loadCatMode)
+  const [catCounts, setCatCounts] = useState(loadCatCounts)
+  const [picks, setPicks]         = useState([])
+  const [saving, setSaving]       = useState(false)
+  const [favName, setFavName]     = useState('')
+  const [saved, setSaved]         = useState(false)
 
   useEffect(() => { localStorage.setItem(COUNT_KEY, count) }, [count])
   useEffect(() => { localStorage.setItem(CAT_MODE_KEY, useCats) }, [useCats])
+  useEffect(() => { localStorage.setItem(CAT_COUNTS_KEY, JSON.stringify(catCounts)) }, [catCounts])
 
-  const canPick = supplies.length >= count
-  const emptyBuckets = useCats ? emptyCategoryBuckets(supplies) : []
-  const catCounts = {
+  // Per-category availability
+  const available = {
     highlight: supplies.filter(s => s.category === 'highlight').length,
     midtone:   supplies.filter(s => s.category === 'midtone').length,
     shadow:    supplies.filter(s => s.category === 'shadow').length,
   }
+  const categorizedCount = available.highlight + available.midtone + available.shadow
+
+  // Clamp counts when supplies are removed
+  useEffect(() => {
+    if (!useCats) {
+      setCount(c => Math.min(c, Math.max(1, supplies.length)))
+    } else {
+      setCatCounts(prev => ({
+        highlight: Math.min(prev.highlight, available.highlight),
+        midtone:   Math.min(prev.midtone,   available.midtone),
+        shadow:    Math.min(prev.shadow,     available.shadow),
+      }))
+    }
+  }, [supplies.length, available.highlight, available.midtone, available.shadow, useCats])
+
+  const totalCatCount = catCounts.highlight + catCounts.midtone + catCounts.shadow
+  const sliderMax     = Math.min(16, useCats ? categorizedCount : supplies.length)
+  const sliderValue   = useCats ? totalCatCount : count
+  const totalCount    = sliderValue
+
+  // "Even" in category mode means smart-distributed given current availability
+  const smartEven = smartDistribute(totalCatCount, available)
+  const isEven = catCounts.highlight === smartEven.highlight
+    && catCounts.midtone === smartEven.midtone
+    && catCounts.shadow  === smartEven.shadow
+
+  const canPick = useCats ? totalCatCount > 0 : count >= 1
+
+  function handleToggleCats(enabled) {
+    if (enabled) {
+      setCatCounts(smartDistribute(count, available))
+    } else {
+      setCount(Math.max(1, Math.min(16, totalCatCount)))
+    }
+    setUseCats(enabled)
+    setPicks([])
+  }
+
+  function handleSlider(newVal) {
+    if (useCats) {
+      if (newVal !== totalCatCount) setCatCounts(smartDistribute(newVal, available))
+    } else {
+      setCount(newVal)
+    }
+  }
+
+  function handleCatCount(cat, newVal) {
+    setCatCounts(prev => ({ ...prev, [cat]: Math.max(0, newVal) }))
+  }
 
   function handlePick() {
     const result = useCats
-      ? pickByCategory(supplies, count)
+      ? pickByCategory(supplies, catCounts)
       : pickRandom(supplies, count)
     setPicks(result)
     setSaving(false)
@@ -63,7 +121,7 @@ export function PalettePicker({ supplies, onSaveFavorite }) {
   return (
     <div className="bg-white border-[1.5px] border-border rounded-xl p-6 flex flex-col gap-4">
 
-      {/* Count slider */}
+      {/* Title + slider */}
       <div className="flex flex-col gap-3">
         <h2 className="font-display text-xl font-semibold text-ink">Pick Random Colors</h2>
         <div className="flex flex-col gap-1.5">
@@ -71,15 +129,15 @@ export function PalettePicker({ supplies, onSaveFavorite }) {
             <label className="text-xs font-medium uppercase tracking-[0.08em] text-ink-muted">
               How many?
             </label>
-            <span className="text-sm font-semibold text-ink tabular-nums">{count}</span>
+            <span className="text-sm font-semibold text-ink tabular-nums">{sliderValue}</span>
           </div>
           <input
-            type="range" min={1} max={16} value={count}
-            onChange={e => setCount(Number(e.target.value))}
+            type="range" min={1} max={Math.max(1, sliderMax)} value={Math.min(sliderValue, sliderMax)}
+            onChange={e => handleSlider(Number(e.target.value))}
             className="w-full accent-terra cursor-pointer"
           />
           <div className="flex justify-between text-[11px] text-ink-faint">
-            <span>1</span><span>16</span>
+            <span>1</span><span>{Math.max(1, sliderMax)}</span>
           </div>
         </div>
       </div>
@@ -90,48 +148,64 @@ export function PalettePicker({ supplies, onSaveFavorite }) {
           type="checkbox"
           className="w-4 h-4 accent-terra cursor-pointer"
           checked={useCats}
-          onChange={e => setUseCats(e.target.checked)}
+          onChange={e => handleToggleCats(e.target.checked)}
         />
         <span className="text-sm text-ink-muted">Use highlight / midtone / shadow categories</span>
       </label>
 
-      {/* Category mode detail */}
+      {/* Per-category steppers */}
       {useCats && (
-        <div className="flex flex-col gap-2 animate-fade-slide-in">
-          {/* Bucket counts */}
-          <div className="flex gap-2 flex-wrap">
-            {(['highlight', 'midtone', 'shadow']).map(cat => (
-              <span
-                key={cat}
-                className={`text-[11px] font-semibold rounded-full px-2.5 py-0.5 border ${CATEGORY_STYLES[cat]}`}
-              >
-                {catCounts[cat]} {cat}
-              </span>
-            ))}
-          </div>
+        <div className="flex flex-col gap-3 animate-fade-slide-in">
+          {categorizedCount === 0 ? (
+            <p className="text-sm text-ink-muted bg-paper border border-border rounded-lg px-3.5 py-2.5">
+              No supplies have categories assigned yet. Use the H / M / S badges in your supply list to assign some.
+            </p>
+          ) : (
+            <>
+              <div className="flex flex-col gap-2">
+                {['highlight', 'midtone', 'shadow'].map(cat => {
+                  const avail = available[cat]
+                  const val   = catCounts[cat]
 
-          {/* Warnings for empty buckets */}
-          {emptyBuckets.length > 0 && (
-            <div className="flex flex-col gap-1.5">
-              {emptyBuckets.map(cat => (
-                <p key={cat} className="text-[13px] text-amber-700 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2">
-                  No <strong>{cat}s</strong> assigned — use the{' '}
-                  <span className={`text-[10px] font-semibold rounded px-1 py-0.5 border inline-block align-middle ${CATEGORY_STYLES[cat]}`}>
-                    {cat === 'highlight' ? 'H' : cat === 'midtone' ? 'M' : 'S'}
-                  </span>
-                  {' '}badge on supplies in your list to assign some.
-                </p>
-              ))}
-            </div>
+                  return (
+                    <div key={cat} className="flex items-center gap-2">
+                      <span className={`text-[10px] font-semibold rounded px-1.5 py-0.5 border flex-shrink-0 ${CATEGORY_STYLES[cat]}`}>
+                        {BADGE_LABELS[cat]}
+                      </span>
+                      <span className="text-sm text-ink capitalize flex-1">{cat}</span>
+                      <span className="text-xs text-ink-faint">{avail} available</span>
+
+                      <div className="flex items-center border-[1.5px] border-border-dark rounded-lg overflow-hidden flex-shrink-0">
+                        <button
+                          className="px-2.5 py-1.5 text-sm text-ink-muted hover:bg-paper hover:text-ink disabled:opacity-30 disabled:cursor-not-allowed transition-colors bg-transparent border-0 cursor-pointer"
+                          onClick={() => handleCatCount(cat, val - 1)}
+                          disabled={val <= 0}
+                        >−</button>
+                        <span className="px-2.5 text-sm font-semibold text-ink min-w-[2rem] text-center tabular-nums select-none">
+                          {val}
+                        </span>
+                        <button
+                          className="px-2.5 py-1.5 text-sm text-ink-muted hover:bg-paper hover:text-ink disabled:opacity-30 disabled:cursor-not-allowed transition-colors bg-transparent border-0 cursor-pointer"
+                          onClick={() => handleCatCount(cat, val + 1)}
+                          disabled={val >= avail || totalCatCount >= sliderMax}
+                        >+</button>
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
+
+              {!isEven && (
+                <button
+                  className="text-xs text-ink-muted hover:text-ink underline bg-transparent border-0 cursor-pointer self-start"
+                  onClick={() => setCatCounts(smartDistribute(totalCatCount, available))}
+                >
+                  Reset to even distribution
+                </button>
+              )}
+            </>
           )}
         </div>
-      )}
-
-      {/* Not enough supplies warning */}
-      {!canPick && (
-        <p className="text-sm text-teal bg-teal-light border border-teal-border rounded-lg px-3.5 py-2.5">
-          You need {count - supplies.length} more {count - supplies.length === 1 ? 'supply' : 'supplies'} — add more to your list or lower the slider.
-        </p>
       )}
 
       <button
@@ -140,7 +214,7 @@ export function PalettePicker({ supplies, onSaveFavorite }) {
         disabled={!canPick}
       >
         <DiceIcon />
-        Pick {count} Random {count === 1 ? 'Color' : 'Colors'}
+        Pick {totalCount} Random {totalCount === 1 ? 'Color' : 'Colors'}
       </button>
 
       {/* Results */}
