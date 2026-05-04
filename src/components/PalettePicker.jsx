@@ -116,6 +116,19 @@ export function PalettePicker({ supplies, onSaveFavorite }) {
     })
   }
 
+  useEffect(() => {
+    function onKeyDown(e) {
+      if (e.code !== 'Space' || e.repeat) return
+      const tag = document.activeElement?.tagName.toLowerCase()
+      if (['input', 'textarea', 'select', 'button'].includes(tag)) return
+      if (document.activeElement?.isContentEditable) return
+      e.preventDefault()
+      if (canPick) handlePick()
+    }
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [canPick, useCats, count, catCounts, supplies])
+
   function handleSave(e) {
     e.preventDefault()
     const name = favName.trim()
@@ -218,14 +231,21 @@ export function PalettePicker({ supplies, onSaveFavorite }) {
         </div>
       )}
 
-      <button
-        className="flex items-center justify-center gap-2 bg-terra text-white rounded-[10px] px-6 py-3.5 text-[15px] font-medium min-h-[48px] hover:bg-terra-dark active:scale-[0.98] disabled:opacity-40 disabled:cursor-not-allowed transition-all cursor-pointer w-full"
-        onClick={handlePick}
-        disabled={!canPick}
-      >
-        <DiceIcon />
-        Pick {totalCount} Random {totalCount === 1 ? 'Color' : 'Colors'}
-      </button>
+      <div className="flex flex-col gap-1.5">
+        <button
+          className="flex items-center justify-center gap-2 bg-terra text-white rounded-[10px] px-6 py-3.5 text-[15px] font-medium min-h-[48px] hover:bg-terra-dark active:scale-[0.98] disabled:opacity-40 disabled:cursor-not-allowed transition-all cursor-pointer w-full"
+          onClick={handlePick}
+          disabled={!canPick}
+        >
+          <DiceIcon />
+          Pick {totalCount} Random {totalCount === 1 ? 'Color' : 'Colors'}
+        </button>
+        {canPick && (
+          <p className="text-center text-[11px] text-ink-faint hidden sm:block select-none">
+            or press <kbd className="font-mono text-[10px] bg-paper border border-border rounded px-1 py-0.5">Space</kbd>
+          </p>
+        )}
+      </div>
 
       {/* Results */}
       {picks.length > 0 && (

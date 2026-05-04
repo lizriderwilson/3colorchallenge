@@ -21,7 +21,7 @@ function CategoryBadge({ category, onCycle }) {
   if (!category) {
     return (
       <button
-        className="text-[10px] font-medium rounded px-1.5 py-0.5 border border-dashed border-ink-faint text-ink-faint hover:border-ink-muted hover:text-ink-muted transition-colors cursor-pointer bg-transparent whitespace-nowrap"
+        className="text-[10px] font-medium rounded px-2 py-1 border border-dashed border-ink-faint text-ink-faint hover:border-ink-muted hover:text-ink-muted transition-colors cursor-pointer bg-transparent whitespace-nowrap"
         onClick={onCycle}
         title={title}
       >
@@ -32,7 +32,7 @@ function CategoryBadge({ category, onCycle }) {
 
   return (
     <button
-      className={`text-[10px] font-semibold rounded px-1.5 py-0.5 border cursor-pointer hover:opacity-70 transition-opacity ${BADGE_STYLES[category]}`}
+      className={`text-[10px] font-semibold rounded px-2 py-1 border cursor-pointer hover:opacity-70 transition-opacity ${BADGE_STYLES[category]}`}
       onClick={onCycle}
       title={title}
     >
@@ -75,7 +75,7 @@ export function SupplyCard({ supply, onRemove, onRename, onSetColor, onSetCatego
 
       {/* Drag handle */}
       <button
-        className="flex-shrink-0 text-ink-faint hover:text-ink-muted opacity-0 group-hover:opacity-100 transition-opacity cursor-grab active:cursor-grabbing touch-none bg-transparent border-0 p-0.5 -ml-0.5"
+        className="flex-shrink-0 text-ink-faint hover:text-ink-muted opacity-0 group-hover:opacity-100 transition-opacity cursor-grab active:cursor-grabbing touch-none bg-transparent border-0 p-1.5 -ml-1"
         {...attributes}
         {...listeners}
         tabIndex={-1}
@@ -150,22 +150,22 @@ export function SupplyCard({ supply, onRemove, onRename, onSetColor, onSetCatego
         {editing ? (
           <>
             <button
-              className="flex items-center justify-center bg-transparent border-0 cursor-pointer text-ink-muted w-[30px] h-[30px] rounded-md hover:bg-paper hover:text-ink transition-colors text-sm"
+              className="flex items-center justify-center bg-transparent border-0 cursor-pointer text-ink-muted w-10 h-10 rounded-md hover:bg-paper hover:text-ink transition-colors text-sm"
               onClick={handleSave} title="Save"
             >✓</button>
             <button
-              className="flex items-center justify-center bg-transparent border-0 cursor-pointer text-ink-muted w-[30px] h-[30px] rounded-md hover:bg-paper hover:text-ink transition-colors text-sm"
+              className="flex items-center justify-center bg-transparent border-0 cursor-pointer text-ink-muted w-10 h-10 rounded-md hover:bg-paper hover:text-ink transition-colors text-sm"
               onClick={() => { setDraft(supply.name); setEditing(false) }} title="Cancel"
             >✕</button>
           </>
         ) : (
           <>
             <button
-              className="flex items-center justify-center bg-transparent border-0 cursor-pointer text-ink-muted w-[30px] h-[30px] rounded-md hover:bg-paper hover:text-ink transition-colors"
+              className="flex items-center justify-center bg-transparent border-0 cursor-pointer text-ink-muted w-10 h-10 rounded-md hover:bg-paper hover:text-ink transition-colors"
               onClick={() => { setDraft(supply.name); setEditing(true) }} title="Rename"
             ><PencilIcon /></button>
             <button
-              className="flex items-center justify-center bg-transparent border-0 cursor-pointer text-ink-muted w-[30px] h-[30px] rounded-md hover:bg-red-50 hover:text-red-700 transition-colors"
+              className="flex items-center justify-center bg-transparent border-0 cursor-pointer text-ink-muted w-10 h-10 rounded-md hover:bg-red-50 hover:text-red-700 transition-colors"
               onClick={() => onRemove(supply.id)} title="Remove"
             ><TrashIcon /></button>
           </>

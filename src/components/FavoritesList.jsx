@@ -29,7 +29,7 @@ export function FavoritesList({ favorites, onRemove }) {
                   {new Date(fav.createdAt).toLocaleDateString()}
                 </span>
                 <button
-                  className="flex items-center justify-center bg-transparent border-0 cursor-pointer text-ink-muted w-[30px] h-[30px] rounded-md hover:bg-red-50 hover:text-red-700 transition-colors flex-shrink-0"
+                  className="flex items-center justify-center bg-transparent border-0 cursor-pointer text-ink-muted w-10 h-10 rounded-md hover:bg-red-50 hover:text-red-700 transition-colors flex-shrink-0"
                   onClick={() => onRemove(fav.id)}
                   title="Delete favorite"
                 >

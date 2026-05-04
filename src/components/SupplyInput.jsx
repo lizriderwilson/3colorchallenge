@@ -1,6 +1,26 @@
 import { useState } from 'react'
 import { parseInput } from '../utils/parseInput'
 
+function SwatchesIllustration() {
+  return (
+    <svg width="148" height="108" viewBox="0 0 148 108" fill="none" aria-hidden="true">
+      {/* Gold swatch — left, fanned CCW */}
+      <rect x="16" y="16" width="38" height="62" rx="9" fill="#D4A843" transform="rotate(-18 35 78)"/>
+      <rect x="16" y="16" width="38" height="18" rx="9" fill="#B8902E" transform="rotate(-18 35 78)"/>
+      {/* Teal swatch — center, upright */}
+      <rect x="55" y="8" width="38" height="70" rx="9" fill="#2C6E8A"/>
+      <rect x="55" y="8" width="38" height="18" rx="9" fill="#235A72"/>
+      {/* Terra swatch — right, fanned CW */}
+      <rect x="94" y="16" width="38" height="62" rx="9" fill="#C1440E" transform="rotate(18 113 78)"/>
+      <rect x="94" y="16" width="38" height="18" rx="9" fill="#A03A0C" transform="rotate(18 113 78)"/>
+      {/* Three pick dots at base */}
+      <circle cx="57" cy="100" r="4.5" fill="#D4A843" opacity="0.7"/>
+      <circle cx="74" cy="103" r="4.5" fill="#2C6E8A" opacity="0.7"/>
+      <circle cx="91" cy="100" r="4.5" fill="#C1440E" opacity="0.7"/>
+    </svg>
+  )
+}
+
 export function SupplyInput({ supplies, onAdd }) {
   const [text, setText] = useState('')
   const [duplicateWarning, setDuplicateWarning] = useState([])
@@ -25,11 +45,14 @@ export function SupplyInput({ supplies, onAdd }) {
   return (
     <div className="flex flex-col gap-3">
       {isOnboarding ? (
-        <div>
-          <h2 className="font-display text-xl font-semibold text-ink">Your Art Supplies</h2>
-          <p className="text-sm text-ink-muted mt-1">
-            Paste your supplies below — one per line or comma-separated.
-          </p>
+        <div className="flex flex-col items-center gap-4 pt-4">
+          <SwatchesIllustration />
+          <div className="text-center">
+            <h2 className="font-display text-xl font-semibold text-ink">Your Art Supplies</h2>
+            <p className="text-sm text-ink-muted mt-1">
+              Paste your supplies below — one per line or comma-separated.
+            </p>
+          </div>
         </div>
       ) : (
         <p className="text-xs font-medium uppercase tracking-[0.08em] text-ink-muted">
