@@ -1,4 +1,6 @@
 import { useState, useRef } from 'react'
+import { useSortable } from '@dnd-kit/sortable'
+import { CSS } from '@dnd-kit/utilities'
 
 const CATEGORY_CYCLE = [null, 'highlight', 'midtone', 'shadow']
 
@@ -44,6 +46,8 @@ export function SupplyCard({ supply, onRemove, onRename, onSetColor, onSetCatego
   const [draft, setDraft] = useState(supply.name)
   const colorInputRef = useRef(null)
 
+  const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({ id: supply.id })
+
   function handleSave() {
     const trimmed = draft.trim()
     if (trimmed && trimmed !== supply.name) onRename(supply.id, trimmed)
@@ -63,7 +67,22 @@ export function SupplyCard({ supply, onRemove, onRename, onSetColor, onSetCatego
   const hasColor = Boolean(supply.colorHex)
 
   return (
-    <div className="group flex items-center gap-2.5 px-2.5 py-2 rounded-lg min-h-[44px] hover:bg-paper transition-colors">
+    <div
+      ref={setNodeRef}
+      style={{ transform: CSS.Transform.toString(transform), transition }}
+      className={`group flex items-center gap-2.5 px-2.5 py-2 rounded-lg min-h-[44px] hover:bg-paper transition-colors ${isDragging ? 'opacity-50 bg-paper z-10 shadow-md' : ''}`}
+    >
+
+      {/* Drag handle */}
+      <button
+        className="flex-shrink-0 text-ink-faint hover:text-ink-muted opacity-0 group-hover:opacity-100 transition-opacity cursor-grab active:cursor-grabbing touch-none bg-transparent border-0 p-0.5 -ml-0.5"
+        {...attributes}
+        {...listeners}
+        tabIndex={-1}
+        aria-label="Drag to reorder"
+      >
+        <GripIcon />
+      </button>
 
       {/* Swatch — click to open color picker */}
       <button
@@ -153,6 +172,16 @@ export function SupplyCard({ supply, onRemove, onRename, onSetColor, onSetCatego
         )}
       </div>
     </div>
+  )
+}
+
+function GripIcon() {
+  return (
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+      <circle cx="9" cy="6" r="1.5"/><circle cx="15" cy="6" r="1.5"/>
+      <circle cx="9" cy="12" r="1.5"/><circle cx="15" cy="12" r="1.5"/>
+      <circle cx="9" cy="18" r="1.5"/><circle cx="15" cy="18" r="1.5"/>
+    </svg>
   )
 }
 

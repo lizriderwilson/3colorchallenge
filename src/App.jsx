@@ -7,7 +7,7 @@ import { ImportExport } from './components/ImportExport'
 import { FavoritesList } from './components/FavoritesList'
 
 export default function App() {
-  const { supplies, addSupplies, removeSupply, renameSupply, patchSupply, replaceAll } = useSupplies()
+  const { supplies, addSupplies, removeSupply, renameSupply, patchSupply, replaceAll, reorderSupplies } = useSupplies()
   const { favorites, addFavorite, removeFavorite } = useFavorites()
 
   function handleMerge(incoming) {
@@ -47,6 +47,7 @@ export default function App() {
           onRename={renameSupply}
           onSetColor={(id, hex) => patchSupply(id, { colorHex: hex, source: 'manual' })}
           onSetCategory={(id, category) => patchSupply(id, { category, categorySource: 'manual' })}
+          onReorder={reorderSupplies}
         />
 
         {supplies.length === 0 && (

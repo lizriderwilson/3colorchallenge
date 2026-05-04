@@ -1,7 +1,19 @@
+import { DndContext, closestCenter, PointerSensor, useSensor, useSensors } from '@dnd-kit/core'
+import { SortableContext, verticalListSortingStrategy, arrayMove } from '@dnd-kit/sortable'
 import { SupplyCard } from './SupplyCard'
 
-export function SupplyList({ supplies, onRemove, onRename, onSetColor, onSetCategory }) {
+export function SupplyList({ supplies, onRemove, onRename, onSetColor, onSetCategory, onReorder }) {
+  const sensors = useSensors(useSensor(PointerSensor, { activationConstraint: { distance: 5 } }))
+
   if (supplies.length === 0) return null
+
+  function handleDragEnd(event) {
+    const { active, over } = event
+    if (!over || active.id === over.id) return
+    const oldIndex = supplies.findIndex(s => s.id === active.id)
+    const newIndex = supplies.findIndex(s => s.id === over.id)
+    onReorder(arrayMove(supplies, oldIndex, newIndex))
+  }
 
   return (
     <div className="flex flex-col">
@@ -13,18 +25,22 @@ export function SupplyList({ supplies, onRemove, onRename, onSetColor, onSetCate
           {supplies.length} {supplies.length === 1 ? 'supply' : 'supplies'}
         </span>
       </div>
-      <div className="flex flex-col gap-1 max-h-[360px] overflow-y-auto border-[1.5px] border-border rounded-xl p-1.5 bg-white styled-scroll">
-        {supplies.map(s => (
-          <SupplyCard
-            key={s.id}
-            supply={s}
-            onRemove={onRemove}
-            onRename={onRename}
-            onSetColor={onSetColor}
-            onSetCategory={onSetCategory}
-          />
-        ))}
-      </div>
+      <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
+        <SortableContext items={supplies.map(s => s.id)} strategy={verticalListSortingStrategy}>
+          <div className="flex flex-col gap-1 max-h-[360px] overflow-y-auto border-[1.5px] border-border rounded-xl p-1.5 bg-white styled-scroll">
+            {supplies.map(s => (
+              <SupplyCard
+                key={s.id}
+                supply={s}
+                onRemove={onRemove}
+                onRename={onRename}
+                onSetColor={onSetColor}
+                onSetCategory={onSetCategory}
+              />
+            ))}
+          </div>
+        </SortableContext>
+      </DndContext>
     </div>
   )
 }

@@ -42,6 +42,9 @@ function reducer(state, action) {
         return updated
       })
 
+    case 'REORDER_SUPPLIES':
+      return action.supplies
+
     case 'REPLACE_ALL':
       return action.supplies.map(s => {
         const base = makeSupply(s.name)
@@ -87,5 +90,6 @@ export function useSupplies() {
     renameSupply: (id, name) => dispatch({ type: 'RENAME_SUPPLY', id, name }),
     patchSupply: (id, updates) => dispatch({ type: 'PATCH_SUPPLY', id, updates }),
     replaceAll: supplies => dispatch({ type: 'REPLACE_ALL', supplies }),
+    reorderSupplies: supplies => dispatch({ type: 'REORDER_SUPPLIES', supplies }),
   }
 }
