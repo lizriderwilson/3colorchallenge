@@ -6,6 +6,7 @@ import { SupplyList } from './components/SupplyList'
 import { PalettePicker } from './components/PalettePicker'
 import { ImportExport } from './components/ImportExport'
 import { FavoritesList } from './components/FavoritesList'
+import { HowToUseModal } from './components/HowToUseModal'
 import { decodeShareLink } from './utils/shareLink'
 
 const CATEGORY_STYLES = {
@@ -18,6 +19,7 @@ export default function App() {
   const { supplies, addSupplies, removeSupply, renameSupply, patchSupply, replaceAll, reorderSupplies } = useSupplies()
   const { favorites, addFavorite, removeFavorite } = useFavorites()
   const [sharedPalette, setSharedPalette] = useState(() => decodeShareLink())
+  const [showHelp, setShowHelp] = useState(false)
 
   useEffect(() => {
     if (sharedPalette) window.history.replaceState(null, '', window.location.pathname)
@@ -42,10 +44,16 @@ export default function App() {
             3 Color Challenge 🎨
           </h1>
         </div>
-        {supplies.length > 0 && (
-          <ImportExport supplies={supplies} onMerge={handleMerge} />
-        )}
+        <button
+          id="how-to-use-btn"
+          className="font-display text-sm font-semibold text-cyan-500 hover:text-cyan-700 bg-cyan-50 hover:bg-cyan-100 transition-colors border-0 cursor-pointer rounded-lg px-3 py-1.5"
+          onClick={() => setShowHelp(true)}
+        >
+          How to Use 💡
+        </button>
       </header>
+
+      {showHelp && <HowToUseModal onClose={() => setShowHelp(false)} />}
 
       <main id="app-main" className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-8 items-start">
         <div id="supplies-column" className="flex flex-col gap-6">
@@ -60,9 +68,7 @@ export default function App() {
             onReorder={reorderSupplies}
           />
 
-          {supplies.length === 0 && (
-            <ImportExport supplies={supplies} onMerge={handleMerge} />
-          )}
+          <ImportExport supplies={supplies} onMerge={handleMerge} />
         </div>
 
         <div id="palette-column" className="flex flex-col gap-6">
