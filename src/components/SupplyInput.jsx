@@ -43,7 +43,7 @@ export function SupplyInput({ supplies, onAdd }) {
   }
 
   return (
-    <div className="flex flex-col gap-3">
+    <div id="supply-input" className="flex flex-col gap-3">
       {isOnboarding ? (
         <div className="flex flex-col items-center gap-4 pt-4">
           <SwatchesIllustration />

@@ -70,12 +70,12 @@ export function SupplyCard({ supply, onRemove, onRename, onSetColor, onSetCatego
     <div
       ref={setNodeRef}
       style={{ transform: CSS.Transform.toString(transform), transition }}
-      className={`group flex items-center gap-2.5 px-2.5 py-2 rounded-lg min-h-[44px] hover:bg-slate-50 transition-colors ${isDragging ? 'opacity-50 bg-slate-50 z-10 shadow-md' : ''}`}
+      className={`group flex items-center justify-between gap-2 p-1 rounded-lg min-h-[32px] hover:bg-slate-50 transition-colors ${isDragging ? 'opacity-50 bg-slate-50 z-10 shadow-md' : ''}`}
     >
 
       {/* Drag handle */}
       <button
-        className="flex-shrink-0 text-slate-400 hover:text-slate-500 opacity-0 group-hover:opacity-100 transition-opacity cursor-grab active:cursor-grabbing touch-none bg-transparent border-0 p-1.5 -ml-1"
+        className="flex-shrink-0 text-slate-400 hover:text-slate-500 opacity-0 group-hover:opacity-100 transition-opacity cursor-grab active:cursor-grabbing touch-none bg-transparent border-0 p-0"
         {...attributes}
         {...listeners}
         tabIndex={-1}
@@ -136,17 +136,8 @@ export function SupplyCard({ supply, onRemove, onRename, onSetColor, onSetCatego
         </button>
       )}
 
-      {/* Category badge — always visible when assigned, hover-only when not */}
-      {supply.category ? (
-        <CategoryBadge category={supply.category} onCycle={cycleCategory} />
-      ) : (
-        <div className="opacity-0 group-hover:opacity-100 transition-opacity">
-          <CategoryBadge category={null} onCycle={cycleCategory} />
-        </div>
-      )}
-
-      {/* Edit / delete actions — hover only */}
-      <div className="flex gap-0.5 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity flex-shrink-0">
+      <div className="flex gap-0.5 items-center flex-shrink-0">
+        <div className="mr-[15px]"><CategoryBadge category={supply.category} onCycle={cycleCategory} /></div>
         {editing ? (
           <>
             <button

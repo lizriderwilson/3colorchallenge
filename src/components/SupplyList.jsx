@@ -16,7 +16,7 @@ export function SupplyList({ supplies, onRemove, onRename, onSetColor, onSetCate
   }
 
   return (
-    <div className="flex flex-col">
+    <div id="supply-list" className="flex flex-col">
       <div className="flex items-baseline justify-between mb-2.5">
         <p className="text-xs font-medium uppercase tracking-[0.08em] text-slate-500">
           Your Supplies
